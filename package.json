@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src --dest dist",
+    "deploy": "deploy.sh"
+  },
+  "dependencies": {
+    "vuepress-theme-meteorlxy": "^1.0.0-alpha.24"
+  },
+  "devDependencies": {
+    "vuepress": "^1.0.0-alpha.44",
+    "vuepress-plugin-sitemap": "^2.1.1"
+  }
+}

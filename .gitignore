@@ -1,0 +1,26 @@
+# File created using '.gitignore Generator' for Visual Studio Code: https://bit.ly/vscode-gig
+
+# Created by https://www.gitignore.io/api/visualstudiocode,vuejs
+# Edit at https://www.gitignore.io/?templates=visualstudiocode,vuejs
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+
+### Vuejs ###
+node_modules
+.DS_Store
+docs/_book
+test/
+
+# End of https://www.gitignore.io/api/visualstudiocode,vuejs
+
+# Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
+dist/
