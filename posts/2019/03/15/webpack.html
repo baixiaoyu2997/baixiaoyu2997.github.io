@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>webpack | L.Rain的博客</title>
+    <meta name="description" content="L.Rain的博客">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.7817e475.css" as="style"><link rel="preload" href="/assets/js/app.a6b76c0f.js" as="script"><link rel="preload" href="/assets/js/6.429d891c.js" as="script"><link rel="preload" href="/assets/js/35.e50bc81b.js" as="script"><link rel="prefetch" href="/assets/js/1.74dc0643.js"><link rel="prefetch" href="/assets/js/10.6cc2a64e.js"><link rel="prefetch" href="/assets/js/11.fe71b1e9.js"><link rel="prefetch" href="/assets/js/12.866ac7c0.js"><link rel="prefetch" href="/assets/js/13.b1933235.js"><link rel="prefetch" href="/assets/js/14.4f348493.js"><link rel="prefetch" href="/assets/js/15.a235c30d.js"><link rel="prefetch" href="/assets/js/16.b882dc0f.js"><link rel="prefetch" href="/assets/js/17.3e6a069a.js"><link rel="prefetch" href="/assets/js/18.40870faa.js"><link rel="prefetch" href="/assets/js/19.9da4f33b.js"><link rel="prefetch" href="/assets/js/20.931734ab.js"><link rel="prefetch" href="/assets/js/21.f8de6353.js"><link rel="prefetch" href="/assets/js/22.25d71433.js"><link rel="prefetch" href="/assets/js/23.20cbe7ff.js"><link rel="prefetch" href="/assets/js/24.aa05cc58.js"><link rel="prefetch" href="/assets/js/25.ce86b560.js"><link rel="prefetch" href="/assets/js/26.5de0ee09.js"><link rel="prefetch" href="/assets/js/27.bc04f82d.js"><link rel="prefetch" href="/assets/js/28.3155e2e0.js"><link rel="prefetch" href="/assets/js/29.82810fe9.js"><link rel="prefetch" href="/assets/js/3.2b6d2a66.js"><link rel="prefetch" href="/assets/js/30.631c4aae.js"><link rel="prefetch" href="/assets/js/31.16638f03.js"><link rel="prefetch" href="/assets/js/32.899fc3ee.js"><link rel="prefetch" href="/assets/js/33.dbb1a2e3.js"><link rel="prefetch" href="/assets/js/34.c649f5a9.js"><link rel="prefetch" href="/assets/js/36.6581f99e.js"><link rel="prefetch" href="/assets/js/37.0e7e5283.js"><link rel="prefetch" href="/assets/js/38.9e6a2ef0.js"><link rel="prefetch" href="/assets/js/39.8567ecc7.js"><link rel="prefetch" href="/assets/js/4.9de937d1.js"><link rel="prefetch" href="/assets/js/40.7df4fbc2.js"><link rel="prefetch" href="/assets/js/41.ff44a042.js"><link rel="prefetch" href="/assets/js/42.654762a6.js"><link rel="prefetch" href="/assets/js/5.d1fd0d20.js"><link rel="prefetch" href="/assets/js/7.5ee597c8.js"><link rel="prefetch" href="/assets/js/8.dc1f42da.js"><link rel="prefetch" href="/assets/js/9.ce11a662.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7817e475.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-meteorlxy"><header class="header" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(https://picsum.photos/1920/250.webp);" data-v-0539f1bd><div data-v-740e207b data-v-0539f1bd><nav class="navbar" data-v-740e207b><div class="container" data-v-740e207b><a href="/" class="router-link-active" data-v-740e207b><span class="navbar-site-name" data-v-740e207b>
+          L.Rain的博客
+        </span></a> <div class="navbar-toggler" data-v-740e207b><svg class="icon" style="font-size:1.2em;" data-v-740e207b data-v-740e207b><title data-v-740e207b data-v-740e207b>menu</title><use xlink:href="#icon-menu" data-v-740e207b data-v-740e207b></use></svg></div> <div class="navbar-links" data-v-740e207b><a href="/" class="navbar-link" data-v-740e207b>
+            主页
+          </a><a href="/posts/" class="navbar-link router-link-active" data-v-740e207b>
+            分类
+          </a><a href="https://github.com/baixiaoyu2997" target="_blank" rel="noopener noreferrer" class="navbar-link" data-v-740e207b>
+            Github
+          </a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-740e207b></div></div> <div class="banner" data-v-98d6aa8c data-v-0539f1bd data-v-0539f1bd><div class="container" data-v-98d6aa8c><div class="center" data-v-98d6aa8c><h1 data-v-98d6aa8c data-v-0539f1bd>
+          webpack
+        </h1></div></div></div></header> <div class="container clearfix show-aside" data-v-6e91a59a data-v-6e91a59a><main class="main" data-v-6e91a59a><div class="post" data-v-6e91a59a data-v-6e91a59a><section class="post-meta main-div" data-v-4e23451f><section class="post-date clearfix" data-v-4e23451f><span class="create-date" data-v-4e23451f>
+      Created : 2019-03-15
+    </span> <!----></section> <section class="post-links" data-v-4e23451f><a href="/posts/2019/02/24/%E5%9F%BA%E4%BA%8E%E4%BA%91%E7%9B%98-vuepress-gh-page%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2.html" class="post-link" data-v-4e23451f>
+      Previous Post : 基于云盘+vuepress+github pages搭建博客
+    </a> <a href="/posts/2019/03/16/html%E8%AF%AD%E4%B9%89%E7%B1%BB%E6%A0%87%E7%AD%BE.html" class="post-link" data-v-4e23451f>
+      Next Post : html语义类标签
+    </a></section></section> <article class="main-div"><div class="post-content content content__default"><p><img src="https://blog-pic.oss-cn-beijing.aliyuncs.com/20191002121033.png" alt="20191002121033.png"></p> <h2 id="entry-入口"><a href="#entry-入口" aria-hidden="true" class="header-anchor">#</a> entry(入口)</h2> <p>单入口：entry是一个字符串</p> <div class="language- extra-class"><pre class="language-text"><code> module.exports={
+    entry:'./path/file.js'
+ }  
+</code></pre></div><p>多入口：entry是一个对象</p> <div class="language- extra-class"><pre class="language-text"><code>module.exports={
+    entry:{
+        app:'./src/app.js',
+        adminApp:'./src/adminApp.js'
+    }
+}
+</code></pre></div><h2 id="output-输出"><a href="#output-输出" aria-hidden="true" class="header-anchor">#</a> output(输出)</h2> <h3 id="单入口配置"><a href="#单入口配置" aria-hidden="true" class="header-anchor">#</a> 单入口配置</h3> <div class="language- extra-class"><pre class="language-text"><code>module.exports={
+    output:{
+        filename:'bundle.js',
+        path:_dirname+'/dist'
+    }
+}
+</code></pre></div><h3 id="多入口配置"><a href="#多入口配置" aria-hidden="true" class="header-anchor">#</a> 多入口配置</h3> <p>通过占位符确保文件名称的唯一</p> <div class="language- extra-class"><pre class="language-text"><code>module.exports={
+    output:{
+        filename:'[name].js',
+        path:_dirname+'/dist'
+    }
+}
+</code></pre></div><h2 id="loaders"><a href="#loaders" aria-hidden="true" class="header-anchor">#</a> loaders</h2> <p>webpack开箱即用只支持JS和JSON两种文件类型，通过Loaders去支持其他文件类型并且把它们转化成有效的模块，并且可以添加到依赖图中。<br>
+本身是一个函数，接受源文件作为参数，返回转换的结果。
+test对应匹配规则，use匹配loader</p> <div class="language- extra-class"><pre class="language-text"><code>module.exports={
+    module:{
+        rules:[
+            {test:/\.txt$/,use:'raw-loader'}
+        ]
+    }
+}
+</code></pre></div><h2 id="plugins"><a href="#plugins" aria-hidden="true" class="header-anchor">#</a> Plugins</h2> <p>插件用于bundle文件的优化，资源管理和环境变量注入。作用于整个构建过程</p> <div class="language- extra-class"><pre class="language-text"><code>module.exports={
+    plugins:[new HtmlWebpackPlugin({template:'./src/index.html'})]
+}
+</code></pre></div><h2 id="module"><a href="#module" aria-hidden="true" class="header-anchor">#</a> module</h2> <p>指定当前的构建环境是：production、development还是none(什么都不做),
+设置mode可以使用webpack内置的函数，默认值为production
+<img src="https://blog-pic.oss-cn-beijing.aliyuncs.com/20190911173248.png" alt="20190911173248.png"></p> <h2 id="热更新：webpack-dev-server"><a href="#热更新：webpack-dev-server" aria-hidden="true" class="header-anchor">#</a> 热更新：webpack-dev-server</h2> <p>WDS不刷新浏览器<br>
+WDS不输出文件，而是放在内存中<br>
+使用的是HotModuleReplacementPlugin插件，设置hot:true之后会自动引用，不需要在plugin中添加</p> <h2 id="文件指纹"><a href="#文件指纹" aria-hidden="true" class="header-anchor">#</a> 文件指纹</h2> <p>文件指纹就是打包后输出的文件名的后缀<br>
+Hash:和整个项目的构建相关，只要项目文件有修改，整个项目构建的hash值就会修改<br>
+Chunkhash:和webpack打包的chunk有关，不同的entry会生成不同的chunkhash值<br>
+contenthash:根据文件内容来定义hash，文件内容不变，则contenthash不变<br>
+推荐使用contenthash</p> <h2 id="js、css、html压缩"><a href="#js、css、html压缩" aria-hidden="true" class="header-anchor">#</a> js、css、html压缩</h2> <p>js压缩：webpack4内置uglifyjs-webpack-plugin<br>
+css压缩：mini-css-extract-plugin + cssnano
+html压缩：html-webpack-plugin</p> <h2 id="资源内联"><a href="#资源内联" aria-hidden="true" class="header-anchor">#</a> 资源内联</h2> <p>使用场景：</p> <ol><li>页面初始化需要做的的初始化脚本</li> <li>css内联避免页面闪动</li> <li>减少网络请求（小图片或者字体内联）</li></ol> <p>html和js内联使用<code>raw-loader</code><br>
+css内联使用：</p> <ol><li>style-loader</li> <li>html-inline-css-webpack-plugin</li></ol> <h2 id="多页面打包通用方案"><a href="#多页面打包通用方案" aria-hidden="true" class="header-anchor">#</a> 多页面打包通用方案</h2> <p>动态获取entry和设置html-webpack-plugin数量<br>
+利用glob.sync</p> <h2 id="提取页面公共资源"><a href="#提取页面公共资源" aria-hidden="true" class="header-anchor">#</a> 提取页面公共资源</h2> <ol><li>基础库分离（vue、react）<br>
+将基础包通过cdn引入，不打入bundle中，使用html-webpack-externals-plugin</li> <li>公共脚本分离（utils中的工具）
+利用webpack内置的SplitChunksPlugin进行公共脚本分离</li></ol> <h2 id="tree-shaking-摇树优化"><a href="#tree-shaking-摇树优化" aria-hidden="true" class="header-anchor">#</a> tree shaking(摇树优化)</h2> <ol><li>tree shaking只能作用于ES6模块,Babel的预置默认把任何模块转译成CommonJS模块,你可以简单设置modules: false来解决此问题。</li> <li>production mode的情况下默认开启</li> <li>在具有副作用的代码中tree-shaking会失效，可以使用webpack-deep-scope-plugin插件来优化，但是如果使用了babel+代码具有副作用的情况下，这个插件还是会失效</li></ol> <h2 id="scope-hoisting-打包后代码的优化"><a href="#scope-hoisting-打包后代码的优化" aria-hidden="true" class="header-anchor">#</a> scope hoisting(打包后代码的优化)</h2> <blockquote><p>production模式默认开启</p></blockquote> <p>打包后有大量函数闭包包裹代码，导致体积增大，运行代码时创建的函数作用域变多，内存开销变大。
+import会被转换成__webopack_require<br>
+通过scope hoisting插件可以解决这个问题，webpack mode为production时默认开启，必须是ES6语法</p> <div class="language- extra-class"><pre class="language-text"><code>plugins:[
+    new webpack.optimize.ModuleConcatenationPlugin()
+]
+</code></pre></div><h2 id="动态分割和动态import"><a href="#动态分割和动态import" aria-hidden="true" class="header-anchor">#</a> 动态分割和动态import</h2> <p>适用场景：</p> <ol><li>抽离相同代码到一个共享块</li> <li>脚本懒加载，使用初始下载的代码更小（首屏优化）
+懒加载js脚本的方式：</li> <li>conmmonJS:require.ensure</li> <li>ES6:动态import(目前还没有原生支持，需要babel转换)<br>
+如何使用动态import?</li> <li>安装babel插件</li></ol> <div class="language- extra-class"><pre class="language-text"><code>npm i @babel/plugin-syntax-dynamic-import --save-dev
+</code></pre></div><ol start="2"><li>配置.babelrc文件</li></ol> <div class="language- extra-class"><pre class="language-text"><code>    &quot;plugin&quot;:[&quot;@babel/plugin-syntax-dynamic-import&quot;]
+</code></pre></div><h2 id="打包组件库和基础库"><a href="#打包组件库和基础库" aria-hidden="true" class="header-anchor">#</a> 打包组件库和基础库</h2> <ol><li>在生成开发版文件和min版文件时，配置mode:'none'来避免打包后文件都为压缩状态的情况</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> TerserPlugin<span class="token operator">=</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'terser-webpack-plugin'</span><span class="token punctuation">)</span>
+module<span class="token punctuation">.</span>exports<span class="token operator">=</span><span class="token punctuation">{</span>
+    mode<span class="token punctuation">:</span><span class="token string">&quot;none&quot;</span><span class="token punctuation">,</span>
+    entry<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token string">'large-number'</span><span class="token punctuation">:</span><span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>      <span class="token comment">// 测试环境代码</span>
+        <span class="token string">'large-number.min'</span><span class="token punctuation">:</span><span class="token string">'./src/index.js'</span>   <span class="token comment">// 线上环境代码</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    output<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        filename<span class="token punctuation">:</span><span class="token string">'[name].js'</span><span class="token punctuation">,</span>
+        library<span class="token punctuation">:</span><span class="token string">'largeNumber'</span><span class="token punctuation">,</span>
+        libraryTarget<span class="token punctuation">:</span><span class="token string">'umd'</span><span class="token punctuation">,</span>                  <span class="token comment">// 用于多环境引入</span>
+        libraryExport<span class="token punctuation">:</span><span class="token string">'default'</span>               <span class="token comment">// 去除引用时额外的.default</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    optimization<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        minimize<span class="token punctuation">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+        minimizer<span class="token punctuation">:</span><span class="token punctuation">[</span>
+            <span class="token keyword">new</span> <span class="token class-name">TerserPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>                <span class="token comment">// TerserPlugin插件支持压缩ES6代码</span>
+                include<span class="token punctuation">:</span><span class="token regex">/\.min\.js$/</span><span class="token punctuation">,</span>         <span class="token comment">// 匹配只压缩.min.js文件</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="构建日志"><a href="#构建日志" aria-hidden="true" class="header-anchor">#</a> 构建日志</h2> <h3 id="统计信息stats"><a href="#统计信息stats" aria-hidden="true" class="header-anchor">#</a> 统计信息stats</h3> <table><thead><tr><th>Preset</th> <th>Alternative</th> <th>Description</th></tr></thead> <tbody><tr><td>'errors-only'</td> <td>none</td> <td>只在发生错误时输出</td></tr> <tr><td>minimal</td> <td>none</td> <td>只在发生错误或有新的编译时输出</td></tr> <tr><td>none</td> <td>false</td> <td>没有输出</td></tr> <tr><td>normal</td> <td>true</td> <td>标准输出</td></tr> <tr><td>verbose</td> <td>none</td> <td>全部输出</td></tr></tbody></table> <p>生产环境配置</p> <div class="language- extra-class"><pre class="language-text"><code>module.exports = {
+    stats:'errors-only'   // 推荐
+}
+</code></pre></div><p>开发环境配置</p> <div class="language- extra-class"><pre class="language-text"><code>devServer: {
+    contentBase: './dist',
+    hot: true,
+    stats: 'errors-only'
+},
+</code></pre></div><p>优化命令行的构建日志，使用<code>friendly-errors-webpack-plugin</code></p> <div class="language- extra-class"><pre class="language-text"><code>plugins:[
+    new FriendlyErrorsWebpackPlugin()
+],
+stats:'errors-only'  // 需要搭配这条命令使用
+</code></pre></div><h2 id="构建配置管理的可选方案"><a href="#构建配置管理的可选方案" aria-hidden="true" class="header-anchor">#</a> 构建配置管理的可选方案</h2> <ol><li>通过多个配置文件管理不同环境的构建，webpack --config 参数进行控制</li> <li>将构建配置设计成一个库</li> <li>抽成一个工具进行管理，比如：create-react-app</li> <li>将所有的配置放在一个文件，通过--env参数控制分支选择</li></ol> <h2 id="冒烟测试"><a href="#冒烟测试" aria-hidden="true" class="header-anchor">#</a> 冒烟测试</h2> <ol><li>判断是否构建成功</li> <li>检测是否有内容输出：</li></ol> <ul><li>是否有js、css等静态资源文件</li> <li>是否有HTML文件</li></ul> <h2 id="持续集成"><a href="#持续集成" aria-hidden="true" class="header-anchor">#</a> 持续集成</h2> <p>优点：</p> <ul><li>快速发现错误</li> <li>防止分支大幅偏离主干
+核心措施是，代码集成到主干之前，必须通过自动化测试。只要有一个测试用例失败，就不能集成。<br>
+接入Travis CI</li></ul> <ol><li>https://travis-ci.org/ 使用gitHub账号登录</li> <li>在https://travis-ci.org/account/repositories 为项目开启</li> <li>项目根目录下新增.travis.yml<br>
+travis.yml文件内容</li></ol> <ul><li>install安装项目依赖</li> <li>script运行测试用例</li></ul> <h2 id="编写好的构建包发布到npm上"><a href="#编写好的构建包发布到npm上" aria-hidden="true" class="header-anchor">#</a> 编写好的构建包发布到npm上</h2> <p>添加用户：npm adduser<br>
+升级版本</p> <ul><li>升级补丁版本号：npm version patch</li> <li>升级小版本号：npm version minor</li> <li>升级大版本号：npm version major<br>
+发布版本：npm publish</li></ul> <h2 id="git规范和changelog生成"><a href="#git规范和changelog生成" aria-hidden="true" class="header-anchor">#</a> git规范和Changelog生成</h2> <p>良好的Git commit规范优势：</p> <ul><li>加快Code Review的流程</li> <li>根据Git Commit的元数据生成Changelog</li> <li>后续维护者可以知道Feature被修改的原因</li></ul> <p>技术方案<br> <img src="https://blog-pic.oss-cn-beijing.aliyuncs.com/20191004115054.png" alt="20191004115054.png"><br>
+提交格式要求</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;
+&lt;BLANK LINE&gt;
+&lt;body&gt;
+&lt;BLANK LINE&gt;
+&lt;footer&gt;
+</code></pre></div><p>type代表某次提交的类型，比如是修复一个bug还是增加一个新的feature.所有的type类型如下:</p> <ul><li>build:主要目的是修改项目构建系统(例如 glup，webpack，rollup 的配置等)的提交</li> <li>ci:主要目的是修改项目继续集成流程(例如 Travis，Jenkins，GitLab CI，Circle等)的提交,</li> <li>docs:仅仅修改了文档，比如README,CHANGELOG,CONTRIBUTE等等</li> <li>feat:新增feature</li> <li>fix:修复bug</li> <li>pref:优化相关，比如提升性能、体验</li> <li>refactor:代码重构，没有加新功能或者修复bug</li> <li>revert:回滚到上一个版本</li> <li>style:仅仅修改了空格、格式缩进、逗号等等，不改变代码逻辑</li> <li>test:测试用例，包括单元测试、集成测试等</li> <li>chore:不属于以上类型的其他类型</li></ul> <p>安装<br> <code>npm install husky --save-dev</code><br> <code>npm install --save-dev @commitlint/{cli,config-conventional}</code><br>
+配置commitlint.config.js</p> <div class="language- extra-class"><pre class="language-text"><code>module.exports = {extends: ['@commitlint/config-conventional']};
+</code></pre></div><p>配置package.json</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;husky&quot;: {
+    &quot;hooks&quot;: {
+      &quot;commit-msg&quot;: &quot;commitlint -E HUSKY_GIT_PARAMS&quot;
+    }  
+  }
+}
+</code></pre></div><h2 id="速度分析：使用speed-measure-webpack-plugin"><a href="#速度分析：使用speed-measure-webpack-plugin" aria-hidden="true" class="header-anchor">#</a> 速度分析：使用speed-measure-webpack-plugin</h2> <div class="language- extra-class"><pre class="language-text"><code>const SpeedMeasureWebpackPlugin = require('speed-measure-webpack-plugin');
+const smp = new SpeedMeasureWebpackPlugin();
+module.exports = smp.wrap({   // 用smp.wrap包裹配置文件
+
+})
+</code></pre></div><h2 id="体积分析：使用webpack-bundle-analyzer"><a href="#体积分析：使用webpack-bundle-analyzer" aria-hidden="true" class="header-anchor">#</a> 体积分析：使用webpack-bundle-analyzer</h2> <div class="language- extra-class"><pre class="language-text"><code>const BundleAnalyzerPlugin=require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+module.exports={
+    plugin:[
+        new BundleAnalyzerPlugin()
+    ]
+}
+</code></pre></div><p>构建完成后会在8888端口展示</p> <h2 id="加快构建速度：升级webpack和node版本"><a href="#加快构建速度：升级webpack和node版本" aria-hidden="true" class="header-anchor">#</a> 加快构建速度：升级webpack和node版本</h2> <p>使用webpack4：优化原因<br>
+v8带来的优化（for of替代forEach、Map和Set替代Object、includes替代indexOf）<br>
+默认使用更快的md4 hash算法<br>
+wepacks AST 可以直接从loader传递给AST，减少解析时间<br>
+使用字符串方法替代正则表达式</p> <h2 id="加快构建速度：多进程-多实例构建"><a href="#加快构建速度：多进程-多实例构建" aria-hidden="true" class="header-anchor">#</a> 加快构建速度：多进程/多实例构建</h2> <p>使用webpack官方维护插件：thread-loader解析资源<br>
+原理：每次webpack解析一个模块，thread-loader会将它及它的依赖分配给worker线程中</p> <div class="language- extra-class"><pre class="language-text"><code>npm install --save-dev thread-loader
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        include: path.resolve(&quot;src&quot;),
+        use: [
+          &quot;thread-loader&quot;,  // thread-loader要写在loader最前面
+          // your expensive loader (e.g babel-loader)
+        ]
+      }
+    ]
+  }
+}
+</code></pre></div><h2 id="加快构建速度：多进程-多实例并行压缩代码"><a href="#加快构建速度：多进程-多实例并行压缩代码" aria-hidden="true" class="header-anchor">#</a> 加快构建速度：多进程/多实例并行压缩代码</h2> <p>使用terser-webppack-plugin 开启parallel参数</p> <div class="language- extra-class"><pre class="language-text"><code>const TerserPlugin=require('terser-webpack-plugin');
+module.exports={
+    optimization:{
+        minimizer:[
+            new TerserPlugin({
+                parallel:4
+            })
+        ]
+    }
+}
+</code></pre></div><h2 id="加快构建速度：进一步分包-预编译资源模块"><a href="#加快构建速度：进一步分包-预编译资源模块" aria-hidden="true" class="header-anchor">#</a> 加快构建速度：进一步分包-预编译资源模块</h2> <p>使用html-webpack-externals-plugin的缺点：每一个基础包都要引入并配置，splitchunk也会再次解析</p> <p>思路：将reat\react-dom\redux\react-redux基础包和业务基础包打包成一个文件
+方法：使用DLLPlugin进行分包，DllReferencePlugin对manifest.json引用<br>
+一般需要单独创建webpack.dll.js配置文件</p> <div class="language- extra-class"><pre class="language-text"><code>const path = require('path');
+const webpack = require('webpack');
+
+module.exports = {
+    entry: {
+        library: [
+            'react',
+            'react-dom'
+        ]
+    },
+    output: {
+        filename: '[name]_[chunkhash].dll.js',
+        path: path.join(__dirname, 'build/library'),
+        library: '[name]'
+    },
+    plugins: [
+        new webpack.DllPlugin({
+            name: '[name]_[hash]',
+            path: path.join(__dirname, 'build/library/[name].json')
+        })
+    ]
+};
+</code></pre></div><p>在webpack中引用</p> <div class="language- extra-class"><pre class="language-text"><code>module.exports={
+    plugins:[
+        new webpack.DllReferencePlugin({
+            manifest:require('./build/library/manifest.json')
+        })
+    ]
+}
+</code></pre></div><blockquote><p>在webpack4中性能方面提升不大，但在分包作用中还是有用的</p></blockquote> <h2 id="加快构建速度：缓存"><a href="#加快构建速度：缓存" aria-hidden="true" class="header-anchor">#</a> 加快构建速度：缓存</h2> <p>目的：提升二次构建速度<br>
+缓存思路：</p> <ul><li>babel-loader开启缓存</li> <li>terser-webpack-plugin 开启缓存</li> <li>使用cache-loader或者hard-source-webpack-plugin(推荐hard-source-webpack-plugin，配置更简单)</li></ul> <h2 id="加快构建速度：缩小构建目标"><a href="#加快构建速度：缩小构建目标" aria-hidden="true" class="header-anchor">#</a> 加快构建速度：缩小构建目标</h2> <p>目的：尽可能的少构建模块<br>
+比如：babel-loader不解析node_modules （各种exclude和include）
+减少文件搜索范围</p> <ul><li>优化resolve.modules配置（减少模块搜索层级）</li> <li>优化resolve.mainFields配置</li> <li>优化resolve.extensions配置</li> <li>合理使用alias</li></ul> <div class="language- extra-class"><pre class="language-text"><code>modules.exports={
+    resolve:{
+        alias:{
+            react:path.resolve(__dirname,'./node_modules/react/dist/react.min.js'),
+        },
+        modules:[path.resolve(__dirname,'node_modules')],
+        extensions:['.js'],
+        mainFields:['main']
+    }
+}
+</code></pre></div><h2 id="treeshaking-删除无用的js和css"><a href="#treeshaking-删除无用的js和css" aria-hidden="true" class="header-anchor">#</a> treeshaking-删除无用的js和css</h2> <p>无用的CSS如何删除掉？<br>
+PurifyCSS:遍历代码，识别已经用到的CSS class<br>
+uncss:HTML需要通过jsdom加载，所有的样式通过PostCSS解析，通过document.querySelector来识别在html文件里面不存在的选择器
+在webpack中如何使用PurifyCSS?<br>
+PurifyCSS-webpack-plugin不再维护所以使用：<br>
+purgecss-webpack-plugin+mini-css-extract-plugin配合使用</p> <div class="language- extra-class"><pre class="language-text"><code>const PurgecssPlugin = require('purgecss-webpack-plugin');
+const PATHS={
+    src:path.join(__dirname,'src')
+}
+
+    plugins:[
+        new PurgecssPlugin({
+            paths:glob.sync(`${PATHS.src}/**/*`,nodir:true) // 插件要求路径必须是绝对路径
+        })
+    ]
+</code></pre></div><h2 id="图片压缩"><a href="#图片压缩" aria-hidden="true" class="header-anchor">#</a> 图片压缩</h2> <p>使用image-webpack-loader<br>
+Imagemin的优点分析</p> <ul><li>有很多定制选项</li> <li>可以引入更多第三方优化插件，例如pngquant</li> <li>可以处理多种图片格式</li></ul> <p>Imagemin的压缩原理<br>
+pngquant:是一款PNG压缩器，通过将图像转换为具有alpha通道（通常比24/32位PNG文件小60-80%）的更高效的8位PNG格式，可显著减少文件大小。<br>
+pngcrush: 其主要目的是通过尝试不同的压缩级别和PNG过滤方法来降低PNG IDAT数据流的大小。<br>
+optipng:其设计灵感来自于pngcrush。optipng可将图像文件重新压缩为更小尺寸，而不会丢失任何信息。
+tinypng:也是将24位png文件转化为更小有索引的8位图片,同时所有非必要的metadata也会被剥离掉</p> <div class="language- extra-class"><pre class="language-text"><code>npm i image-webpack-loader -D
+
+rules: [{
+  test: /\.(gif|png|jpe?g|svg)$/i,
+  use: [
+    'file-loader',
+    {
+      loader: 'image-webpack-loader',
+      options: {
+        mozjpeg: {
+          progressive: true,
+          quality: 65
+        },
+        // optipng.enabled: false will disable optipng
+        optipng: {
+          enabled: false,
+        },
+        pngquant: {
+          quality: [0.65, 0.90],
+          speed: 4
+        },
+        gifsicle: {
+          interlaced: false,
+        },
+        // the webp option will enable WEBP
+        webp: {
+          quality: 75
+        }
+      }
+    },
+  ],
+}]
+</code></pre></div><h2 id="构建体积优化：动态polyfill"><a href="#构建体积优化：动态polyfill" aria-hidden="true" class="header-anchor">#</a> 构建体积优化：动态polyfill</h2> <p>使用Polyfill Service<br>
+原理：识别User Agent,下发不同的Polyfill
+通过插入<code>https://polyfill.io/v3/polyfill.min.js</code>来实现动态polyfill<br>
+国内可以使用阿里的服务<code>http://polyfill.alicdn.com/polyfill.min.js</code>,速度更快
+使用方法：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>https://polyfill.io/v3/polyfill.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="配置"><a href="#配置" aria-hidden="true" class="header-anchor">#</a> 配置</h2> <h3 id="px自动转换成rem"><a href="#px自动转换成rem" aria-hidden="true" class="header-anchor">#</a> px自动转换成rem</h3> <p>需要在html文件中内联引入lib-flexible，一起使用，可以添加exclude去掉不想转换的库，也可以添加/<em>no</em>/的语法去设置某一行样式不进行转换</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    loader: 'px2rem-loader',
+    options: {
+        remUnit: 75,   // 如果是750的设计稿
+        remPrecision: 8
+    }
+}
+</code></pre></div><h3 id="自动添加css前缀"><a href="#自动添加css前缀" aria-hidden="true" class="header-anchor">#</a> 自动添加css前缀</h3> <div class="language- extra-class"><pre class="language-text"><code>{
+    loader: 'postcss-loader',
+    options: {
+        plugins: () =&gt; [
+            require('autoprefixer')({
+                browsers: ['last 2 version', '&gt;1%', 'ios 7']
+            })
+        ]
+    }
+</code></pre></div><h3 id="自动清除构建目录产物"><a href="#自动清除构建目录产物" aria-hidden="true" class="header-anchor">#</a> 自动清除构建目录产物</h3> <div class="language- extra-class"><pre class="language-text"><code>const CleanWebpackPlugin = require('clean-webpack-plugin');
+plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new CleanWebpackPlugin(),
+        new FriendlyErrorsWebpackPlugin()
+    ].concat(htmlWebpackPlugins)
+</code></pre></div><h3 id="文件监听"><a href="#文件监听" aria-hidden="true" class="header-anchor">#</a> 文件监听</h3> <p>webpack开启监听模式有两种方式：</p> <ul><li>启动webpack命令时，带上 --watch 参数</li> <li>再配置webpack.config.js 中设置watch:true</li></ul> <p>文件监听的原理分析：
+轮询判断文件的最后编辑时间是否变化
+某个文件发生了变化，并不会立刻告诉监听者，而是先缓存起来，等aggregateTimeout</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>export<span class="token operator">=</span><span class="token punctuation">{</span>
+    <span class="token comment">// 默认false,</span>
+    watch<span class="token punctuation">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token comment">// 只有开启监听模式时，watchOptions才有意义</span>
+    watchOptions<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token comment">// 默认为空，忽略文件夹，支持正则，支持数组</span>
+        ignored<span class="token punctuation">:</span><span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
+        <span class="token comment">// 监听到变化发生后会等300ms再去执行，默认300ms</span>
+        aggregateTimeout<span class="token punctuation">:</span><span class="token number">300</span><span class="token punctuation">,</span>
+        <span class="token comment">// 轮询间隔，默认每秒检查一次变动</span>
+        poll<span class="token punctuation">:</span><span class="token number">1000</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="热更新"><a href="#热更新" aria-hidden="true" class="header-anchor">#</a> 热更新</h3> <p>需要<code>webpack-dev-server</code>,配置webpack文件</p> <div class="language- extra-class"><pre class="language-text"><code> devServer: {
+        hot: true
+ }
+</code></pre></div><h3 id="devtool分类"><a href="#devtool分类" aria-hidden="true" class="header-anchor">#</a> devtool分类</h3> <p><img src="https://upload-images.jianshu.io/upload_images/13805935-5616f8a35b8a6262.png" alt="alt"><br> <strong>这么多模式，到底试用哪个？</strong></p> <ol><li>开发环境推荐：<code>cheap-module-eval-source-map</code></li> <li>生产环境推荐：<code>cheap-module-source-map</code></li> <li>相关解释：</li></ol> <ul><li>大部分情况我们调试并不关心列信息，而且就算 sourcemap 没有列，有些浏览器引擎（例如 v8） 也会给出列信息，所以我们使用 cheap 模式可以大幅提高 souremap 生成的效率。</li> <li>使用 module 可支持 babel 这种预编译工具（在 webpack 里做为 loader 使用）。</li> <li>使用 eval 方式可大幅提高持续构建效率，参考webapck devtool速度对比列表，这对经常需要边改边调的前端开发而言非常重要</li> <li>直接将sourceMap放入打包后的文件，会明显增大文件的大小，不利于静态文件的快速加载；而外联.map时，.map文件只会在F12开启时进行下载（sourceMap主要服务于调试），故推荐使用外联.map的形式。</li></ul> <h3 id="参考文章"><a href="#参考文章" aria-hidden="true" class="header-anchor">#</a> 参考文章</h3> <p><a href="https://www.cnblogs.com/hhhyaaon/p/5657469.html" target="_blank" rel="noopener noreferrer">[webpack] devtool配置对比<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div></article> <section class="post-meta main-div" data-v-4e23451f><section class="post-date clearfix" data-v-4e23451f><span class="create-date" data-v-4e23451f>
+      Created : 2019-03-15
+    </span> <!----></section> <section class="post-links" data-v-4e23451f><a href="/posts/2019/02/24/%E5%9F%BA%E4%BA%8E%E4%BA%91%E7%9B%98-vuepress-gh-page%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2.html" class="post-link" data-v-4e23451f>
+      Previous Post : 基于云盘+vuepress+github pages搭建博客
+    </a> <a href="/posts/2019/03/16/html%E8%AF%AD%E4%B9%89%E7%B1%BB%E6%A0%87%E7%AD%BE.html" class="post-link" data-v-4e23451f>
+      Next Post : html语义类标签
+    </a></section></section> <div id="post-comments" class="main-div"><!----></div></div></main> <aside class="aside" data-v-6e91a59a><div class="info-card main-div" data-v-03c72fc4 data-v-6e91a59a><div class="info-card-header" data-v-03c72fc4><img src="https://avatars3.githubusercontent.com/u/9149999?s=460&amp;v=4" alt="L.Rain" class="info-avatar" data-v-03c72fc4></div> <div class="info-card-body" data-v-03c72fc4><section class="info-nickname" data-v-03c72fc4>
+      L.Rain
+    </section> <section class="info-desc" data-v-03c72fc4>真实、自由、宽容</section> <section class="info-contact" data-v-03c72fc4><section data-v-03c72fc4><span title="Tianjin City, China" data-v-03c72fc4 data-v-03c72fc4><svg class="icon" style="font-size:1em;" data-v-03c72fc4 data-v-03c72fc4><title data-v-03c72fc4 data-v-03c72fc4>Tianjin City, China</title><use xlink:href="#icon-location" data-v-03c72fc4 data-v-03c72fc4></use></svg><span class="info-text" data-v-03c72fc4 data-v-03c72fc4>
+          Tianjin City, China
+        </span></span></section> <section data-v-03c72fc4><span title="Tianjin A.Brain Technology" data-v-03c72fc4 data-v-03c72fc4><svg class="icon" style="font-size:1em;" data-v-03c72fc4 data-v-03c72fc4><title data-v-03c72fc4 data-v-03c72fc4>Tianjin A.Brain Technology</title><use xlink:href="#icon-organization" data-v-03c72fc4 data-v-03c72fc4></use></svg><span class="info-text" data-v-03c72fc4 data-v-03c72fc4>
+          Tianjin A.Brain Technology
+        </span></span></section> <section data-v-03c72fc4><a href="mailto:bxy2997@sina.com" title="bxy2997@sina.com" data-v-03c72fc4 data-v-03c72fc4><svg class="icon" style="font-size:1em;" data-v-03c72fc4 data-v-03c72fc4><title data-v-03c72fc4 data-v-03c72fc4>bxy2997@sina.com</title><use xlink:href="#icon-email" data-v-03c72fc4 data-v-03c72fc4></use></svg><span class="info-text" data-v-03c72fc4 data-v-03c72fc4>
+          bxy2997@sina.com
+        </span></a></section></section></div> <div class="info-card-footer" data-v-03c72fc4><section class="info-sns clearfix" data-v-03c72fc4><a href="https://github.com/baixiaoyu2997" target="_blank" class="sns-link" data-v-03c72fc4><span title="GitHub: L.Rain" class="sns-icon" data-v-03c72fc4 data-v-03c72fc4><svg class="icon" style="font-size:1.5em;" data-v-03c72fc4 data-v-03c72fc4><title data-v-03c72fc4 data-v-03c72fc4>GitHub: L.Rain</title><use xlink:href="#icon-github" data-v-03c72fc4 data-v-03c72fc4></use></svg></span></a><a href="https://weibo.com/1504398495" target="_blank" class="sns-link" data-v-03c72fc4><span title="新浪微博: 白晓宇V" class="sns-icon" data-v-03c72fc4 data-v-03c72fc4><svg class="icon" style="font-size:1.5em;" data-v-03c72fc4 data-v-03c72fc4><title data-v-03c72fc4 data-v-03c72fc4>新浪微博: 白晓宇V</title><use xlink:href="#icon-weibo" data-v-03c72fc4 data-v-03c72fc4></use></svg></span></a></section></div></div> <div class="post-nav-card main-div" style="position:relative;top:0;width:0px;" data-v-6e91a59a><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>Table of Contents</span> <div class="post-nav-toc"><ul><li><a href="/posts/2019/03/15/webpack.html#entry-入口">entry(入口)</a></li><li><a href="/posts/2019/03/15/webpack.html#output-输出">output(输出)</a><ul><li><a href="/posts/2019/03/15/webpack.html#单入口配置">单入口配置</a></li><li><a href="/posts/2019/03/15/webpack.html#多入口配置">多入口配置</a></li></ul></li><li><a href="/posts/2019/03/15/webpack.html#loaders">loaders</a></li><li><a href="/posts/2019/03/15/webpack.html#plugins">Plugins</a></li><li><a href="/posts/2019/03/15/webpack.html#module">module</a></li><li><a href="/posts/2019/03/15/webpack.html#热更新：webpack-dev-server">热更新：webpack-dev-server</a></li><li><a href="/posts/2019/03/15/webpack.html#文件指纹">文件指纹</a></li><li><a href="/posts/2019/03/15/webpack.html#js、css、html压缩">js、css、html压缩</a></li><li><a href="/posts/2019/03/15/webpack.html#资源内联">资源内联</a></li><li><a href="/posts/2019/03/15/webpack.html#多页面打包通用方案">多页面打包通用方案</a></li><li><a href="/posts/2019/03/15/webpack.html#提取页面公共资源">提取页面公共资源</a></li><li><a href="/posts/2019/03/15/webpack.html#tree-shaking-摇树优化">tree shaking(摇树优化)</a></li><li><a href="/posts/2019/03/15/webpack.html#scope-hoisting-打包后代码的优化">scope hoisting(打包后代码的优化)</a></li><li><a href="/posts/2019/03/15/webpack.html#动态分割和动态import">动态分割和动态import</a></li><li><a href="/posts/2019/03/15/webpack.html#打包组件库和基础库">打包组件库和基础库</a></li><li><a href="/posts/2019/03/15/webpack.html#构建日志">构建日志</a><ul><li><a href="/posts/2019/03/15/webpack.html#统计信息stats">统计信息stats</a></li></ul></li><li><a href="/posts/2019/03/15/webpack.html#构建配置管理的可选方案">构建配置管理的可选方案</a></li><li><a href="/posts/2019/03/15/webpack.html#冒烟测试">冒烟测试</a></li><li><a href="/posts/2019/03/15/webpack.html#持续集成">持续集成</a></li><li><a href="/posts/2019/03/15/webpack.html#编写好的构建包发布到npm上">编写好的构建包发布到npm上</a></li><li><a href="/posts/2019/03/15/webpack.html#git规范和changelog生成">git规范和Changelog生成</a></li><li><a href="/posts/2019/03/15/webpack.html#速度分析：使用speed-measure-webpack-plugin">速度分析：使用speed-measure-webpack-plugin</a></li><li><a href="/posts/2019/03/15/webpack.html#体积分析：使用webpack-bundle-analyzer">体积分析：使用webpack-bundle-analyzer</a></li><li><a href="/posts/2019/03/15/webpack.html#加快构建速度：升级webpack和node版本">加快构建速度：升级webpack和node版本</a></li><li><a href="/posts/2019/03/15/webpack.html#加快构建速度：多进程-多实例构建">加快构建速度：多进程/多实例构建</a></li><li><a href="/posts/2019/03/15/webpack.html#加快构建速度：多进程-多实例并行压缩代码">加快构建速度：多进程/多实例并行压缩代码</a></li><li><a href="/posts/2019/03/15/webpack.html#加快构建速度：进一步分包-预编译资源模块">加快构建速度：进一步分包-预编译资源模块</a></li><li><a href="/posts/2019/03/15/webpack.html#加快构建速度：缓存">加快构建速度：缓存</a></li><li><a href="/posts/2019/03/15/webpack.html#加快构建速度：缩小构建目标">加快构建速度：缩小构建目标</a></li><li><a href="/posts/2019/03/15/webpack.html#treeshaking-删除无用的js和css">treeshaking-删除无用的js和css</a></li><li><a href="/posts/2019/03/15/webpack.html#图片压缩">图片压缩</a></li><li><a href="/posts/2019/03/15/webpack.html#构建体积优化：动态polyfill">构建体积优化：动态polyfill</a></li><li><a href="/posts/2019/03/15/webpack.html#配置">配置</a><ul><li><a href="/posts/2019/03/15/webpack.html#px自动转换成rem">px自动转换成rem</a></li><li><a href="/posts/2019/03/15/webpack.html#自动添加css前缀">自动添加css前缀</a></li><li><a href="/posts/2019/03/15/webpack.html#自动清除构建目录产物">自动清除构建目录产物</a></li><li><a href="/posts/2019/03/15/webpack.html#文件监听">文件监听</a></li><li><a href="/posts/2019/03/15/webpack.html#热更新">热更新</a></li><li><a href="/posts/2019/03/15/webpack.html#devtool分类">devtool分类</a></li><li><a href="/posts/2019/03/15/webpack.html#参考文章">参考文章</a></li></ul></li></ul></div></div> <div class="post-nav-comments"><svg class="icon"><title>comment</title><use xlink:href="#icon-comment"></use></svg> <a href="/posts/2019/03/15/webpack.html#post-comments">
+      Comments
+    </a></div></div></aside></div> <footer class="footer" data-v-1114308c><p class="sns-links" data-v-1114308c><a href="https://github.com/baixiaoyu2997" target="_blank" class="sns-link" data-v-1114308c><span title="GitHub: L.Rain" class="sns-icon" data-v-1114308c data-v-1114308c><svg class="icon" style="font-size:25px;" data-v-1114308c data-v-1114308c><title data-v-1114308c data-v-1114308c>GitHub: L.Rain</title><use xlink:href="#icon-github" data-v-1114308c data-v-1114308c></use></svg></span></a><a href="https://weibo.com/1504398495" target="_blank" class="sns-link" data-v-1114308c><span title="新浪微博: 白晓宇V" class="sns-icon" data-v-1114308c data-v-1114308c><svg class="icon" style="font-size:25px;" data-v-1114308c data-v-1114308c><title data-v-1114308c data-v-1114308c>新浪微博: 白晓宇V</title><use xlink:href="#icon-weibo" data-v-1114308c data-v-1114308c></use></svg></span></a></p> <p data-v-1114308c><span data-v-1114308c>Powered by </span> <a href="https://vuepress.vuejs.org" target="_blank" data-v-1114308c>
+      Vuepress
+    </a></p></footer></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.a6b76c0f.js" defer></script><script src="/assets/js/6.429d891c.js" defer></script><script src="/assets/js/35.e50bc81b.js" defer></script>
+  </body>
+</html>
