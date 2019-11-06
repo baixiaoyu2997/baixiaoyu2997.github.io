@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>基于React和Hooks的聊天Demo | L.Rain的博客</title>
+    <meta name="description" content="L.Rain的博客">
+    <link rel="preload" href="/assets/css/0.styles.e6f0f8c3.css" as="style"><link rel="preload" href="/assets/js/app.4bdb41a7.js" as="script"><link rel="preload" href="/assets/js/6.d6b6a6f8.js" as="script"><link rel="preload" href="/assets/js/38.a2af48cb.js" as="script"><link rel="prefetch" href="/assets/js/1.9657ea73.js"><link rel="prefetch" href="/assets/js/10.29472997.js"><link rel="prefetch" href="/assets/js/11.d62a415b.js"><link rel="prefetch" href="/assets/js/12.68a37402.js"><link rel="prefetch" href="/assets/js/13.a132d5fc.js"><link rel="prefetch" href="/assets/js/14.953e3697.js"><link rel="prefetch" href="/assets/js/15.419449ed.js"><link rel="prefetch" href="/assets/js/16.4c902de4.js"><link rel="prefetch" href="/assets/js/17.d57506ba.js"><link rel="prefetch" href="/assets/js/18.746af2d5.js"><link rel="prefetch" href="/assets/js/19.066e6200.js"><link rel="prefetch" href="/assets/js/20.f6fbbbe9.js"><link rel="prefetch" href="/assets/js/21.4a16a873.js"><link rel="prefetch" href="/assets/js/22.99f3699b.js"><link rel="prefetch" href="/assets/js/23.309010f7.js"><link rel="prefetch" href="/assets/js/24.8113c2cb.js"><link rel="prefetch" href="/assets/js/25.f16c346b.js"><link rel="prefetch" href="/assets/js/26.3433d133.js"><link rel="prefetch" href="/assets/js/27.e1b2c2c6.js"><link rel="prefetch" href="/assets/js/28.b6a20e70.js"><link rel="prefetch" href="/assets/js/29.eb6ad635.js"><link rel="prefetch" href="/assets/js/3.a84fb11d.js"><link rel="prefetch" href="/assets/js/30.aa6aa238.js"><link rel="prefetch" href="/assets/js/31.2990071c.js"><link rel="prefetch" href="/assets/js/32.62ab0cc2.js"><link rel="prefetch" href="/assets/js/33.2be4b3a0.js"><link rel="prefetch" href="/assets/js/34.855083f9.js"><link rel="prefetch" href="/assets/js/35.bdc2723a.js"><link rel="prefetch" href="/assets/js/36.13363fa7.js"><link rel="prefetch" href="/assets/js/37.524decb9.js"><link rel="prefetch" href="/assets/js/39.8b362d3e.js"><link rel="prefetch" href="/assets/js/4.f4bd67e9.js"><link rel="prefetch" href="/assets/js/40.b816af70.js"><link rel="prefetch" href="/assets/js/41.b5f8f60e.js"><link rel="prefetch" href="/assets/js/42.ab948492.js"><link rel="prefetch" href="/assets/js/43.6104deda.js"><link rel="prefetch" href="/assets/js/44.910691dc.js"><link rel="prefetch" href="/assets/js/5.4efdda07.js"><link rel="prefetch" href="/assets/js/7.879034e2.js"><link rel="prefetch" href="/assets/js/8.3b96d986.js"><link rel="prefetch" href="/assets/js/9.597e4156.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e6f0f8c3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-meteorlxy"><header class="header" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(https://picsum.photos/1920/250.webp);" data-v-0be91240><div data-v-740e207b data-v-0be91240><nav class="navbar" data-v-740e207b><div class="container" data-v-740e207b><a href="/" class="router-link-active" data-v-740e207b><span class="navbar-site-name" data-v-740e207b>
+          L.Rain的博客
+        </span></a> <div class="navbar-toggler" data-v-740e207b><svg class="icon" style="font-size:1.2em;" data-v-740e207b data-v-740e207b><title data-v-740e207b data-v-740e207b>menu</title><use xlink:href="#icon-menu" data-v-740e207b data-v-740e207b></use></svg></div> <div class="navbar-links" data-v-740e207b><a href="/" class="navbar-link" data-v-740e207b>
+            主页
+          </a><a href="/posts/" class="navbar-link router-link-active" data-v-740e207b>
+            分类
+          </a><a href="https://github.com/baixiaoyu2997" target="_blank" rel="noopener noreferrer" class="navbar-link" data-v-740e207b>
+            Github
+          </a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-740e207b></div></div> <div class="banner" data-v-98d6aa8c data-v-0be91240 data-v-0be91240><div class="container" data-v-98d6aa8c><div class="center" data-v-98d6aa8c><h1 data-v-98d6aa8c data-v-0be91240>
+          基于React和Hooks的聊天Demo
+        </h1></div></div></div></header> <div class="container clearfix show-aside" data-v-6e91a59a data-v-6e91a59a><main class="main" data-v-6e91a59a><div class="post" data-v-6e91a59a data-v-6e91a59a><section class="post-meta main-div" data-v-4e23451f><section class="post-date clearfix" data-v-4e23451f><span class="create-date" data-v-4e23451f>
+      发布时间 : 2019-11-02
+    </span> <span class="update-date" data-v-4e23451f>
+      最后修改 : 2019-11-04
+    </span></section> <section class="post-links" data-v-4e23451f><a href="/posts/2019/10/30/%E7%BB%83%E6%89%8B%E9%A1%B9%E7%9B%AE.html" class="post-link" data-v-4e23451f>
+      上一篇 : 练手项目
+    </a> <a href="/posts/2019/11/05/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html" class="post-link" data-v-4e23451f>
+      下一篇 : 前端工程化
+    </a></section></section> <article class="main-div"><div class="post-content content content__default"><h1 id="创建一个聊天应用基于-react-和-hooks"><a href="#创建一个聊天应用基于-react-和-hooks" aria-hidden="true" class="header-anchor">#</a> 创建一个聊天应用基于 React 和 Hooks</h1> <blockquote><p>原文地址：https://www.cometchat.com/tutorials/building-a-chat-app-with-react-hooks-a-pragmatic-example/</p></blockquote> <p>这是一个 react 练手项目，效果图：<br> <img src="https://blog-pic.oss-cn-beijing.aliyuncs.com/react_hooks_img.gif" alt="react_hooks_img.gif"></p> <h2 id="cometchat-概览"><a href="#cometchat-概览" aria-hidden="true" class="header-anchor">#</a> CometChat 概览</h2> <p>我们不需要自己做后端，我们将使用<code>CometChat</code>，它是一个 API，使我们能够轻松地构建实时聊天等通信功能,在我们的例子中，我们将利用 npm 模块进行连接，并开始实时传输消息。<br>
+在这之前我们需要创建一个<a href="https://app.cometchat.com/#/register" target="_blank" rel="noopener noreferrer">CometChat<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>账户，并创建一个<code>CometChat app</code></p> <p><img src="https://blog-pic.oss-cn-beijing.aliyuncs.com/20191102114343.png" alt="20191102114343.png"></p> <blockquote><p>注意：本文章在创建应用时，选择的是 v1 版本</p></blockquote> <p>创建之后，进入<code>API Keys</code>,复制自动生成的<code>autoOnly key</code>,我们将在下一步需要它</p> <p><img src="https://blog-pic.oss-cn-beijing.aliyuncs.com/20191102114636.png" alt="20191102114636.png"></p> <h2 id="创建-react-项目"><a href="#创建-react-项目" aria-hidden="true" class="header-anchor">#</a> 创建 React 项目</h2> <p>打开命令行 blah blah blah🙄</p> <div class="language- extra-class"><pre class="language-text"><code>create-react-app react-chat
+</code></pre></div><p>创建完之后安装以下依赖包：</p> <div class="language- extra-class"><pre class="language-text"><code>npm install @cometchat-pro/chat bootstrap react-md-spinner react-notifications
+</code></pre></div><p>接着删除<code>src</code>文件夹下所有文件：</p> <div class="language- extra-class"><pre class="language-text"><code>rm src/*
+</code></pre></div><p>然后新建一个<code>CometChat</code>的配置文件<code>src/config.js</code>,并抛出给全局使用：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  appID<span class="token punctuation">:</span> <span class="token string">&quot;{Your CometChat Pro App ID here}&quot;</span><span class="token punctuation">,</span>
+  apiKey<span class="token punctuation">:</span> <span class="token string">&quot;{Your CometChat Pro Api Key here}&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> config<span class="token punctuation">;</span>
+</code></pre></div><p>下一步，新建一个<code>src/index.js</code>文件,初始化<code>CometChat</code>：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">&quot;react-dom&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> CometChat <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@cometchat-pro/chat&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">&quot;./components/App&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> config <span class="token keyword">from</span> <span class="token string">&quot;./config&quot;</span><span class="token punctuation">;</span>
+CometChat<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>appID<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;root&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="编写组件"><a href="#编写组件" aria-hidden="true" class="header-anchor">#</a> 编写组件</h2> <p>现在我们创建一个<code>components</code>文件夹用来存放我们的组件，我们的应用将会由 3 个组件组成，<code>App</code>，<code>Login</code>，<code>Chat</code>。<br> <strong>App.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span> This is the App component<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre></div><p><strong>Login.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">Login</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span> This is the Login component<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Login<span class="token punctuation">;</span>
+</code></pre></div><p><strong>Chat.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">Chat</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span> This is the Chat component<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Chat<span class="token punctuation">;</span>
+</code></pre></div><h2 id="创建-app-组件"><a href="#创建-app-组件" aria-hidden="true" class="header-anchor">#</a> 创建 App 组件</h2> <p>App 组件主要做的是根据登录状态来显示<code>Chat</code>或者<code>Login</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">&quot;bootstrap/dist/css/bootstrap.css&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">&quot;react-notifications/lib/notifications.css&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">&quot;./App.css&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NotificationContainer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react-notifications&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Login <span class="token keyword">from</span> <span class="token string">&quot;./Login&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Chat <span class="token keyword">from</span> <span class="token string">&quot;./Chat&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>user<span class="token punctuation">,</span> setUser<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">renderApp</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Render Chat component when user state is not null</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token operator">&lt;</span>Chat user<span class="token operator">=</span><span class="token punctuation">{</span>user<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token operator">&lt;</span>Login setUser<span class="token operator">=</span><span class="token punctuation">{</span>setUser<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;container&quot;</span><span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token function">renderApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre></div><p>现在还没有<code>App.css</code>，我们来创建一个：</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.container</span> <span class="token punctuation">{</span>
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> 5%<span class="token punctuation">;</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 5%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.login-form</span> <span class="token punctuation">{</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 5%<span class="token punctuation">;</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 5px 8px 0 <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.2<span class="token punctuation">)</span><span class="token punctuation">,</span> 0 9px 26px 0 <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.19<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.login-form h3</span> <span class="token punctuation">{</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #333<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.login-container form</span> <span class="token punctuation">{</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 10%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.message</span> <span class="token punctuation">{</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.balon1</span> <span class="token punctuation">{</span>
+  <span class="token property">float</span><span class="token punctuation">:</span> right<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #35cce6<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.balon2</span> <span class="token punctuation">{</span>
+  <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #f4f7f9<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.container</span> <span class="token punctuation">{</span>
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> 5%<span class="token punctuation">;</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 5%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.login-form</span> <span class="token punctuation">{</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 5%<span class="token punctuation">;</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 5px 8px 0 <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.2<span class="token punctuation">)</span><span class="token punctuation">,</span> 0 9px 26px 0 <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.19<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.login-form h3</span> <span class="token punctuation">{</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #333<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.login-container form</span> <span class="token punctuation">{</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 10%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.message</span> <span class="token punctuation">{</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.balon1</span> <span class="token punctuation">{</span>
+  <span class="token property">float</span><span class="token punctuation">:</span> right<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #35cce6<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.balon2</span> <span class="token punctuation">{</span>
+  <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #f4f7f9<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="创建-login-组件"><a href="#创建-login-组件" aria-hidden="true" class="header-anchor">#</a> 创建 Login 组件</h2> <p><code>Login</code>组件虽然代码量多了点，但是其实做的事情很简单，这个表单帮助我们登录<code>CometChat</code>,并返回用户信息</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NotificationManager <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react-notifications&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> CometChat <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@cometchat-pro/chat&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> config <span class="token keyword">from</span> <span class="token string">&quot;../config&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">Login</span> <span class="token operator">=</span> <span class="token parameter">props</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>uidValue<span class="token punctuation">,</span> setUidValue<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>isSubmitting<span class="token punctuation">,</span> setIsSubmitting<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">handleSubmit</span> <span class="token operator">=</span> <span class="token parameter">event</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">setIsSubmitting</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    CometChat<span class="token punctuation">.</span><span class="token function">login</span><span class="token punctuation">(</span>uidValue<span class="token punctuation">,</span> config<span class="token punctuation">.</span>apiKey<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>
+      <span class="token parameter">User</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        NotificationManager<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token string">&quot;You are now logged in&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Login Success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Login Successful:&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> User <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        props<span class="token punctuation">.</span><span class="token function">setUser</span><span class="token punctuation">(</span>User<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token parameter">error</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        NotificationManager<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;Please try again&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Login Failed&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Login failed with exception:&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> error <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setIsSubmitting</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;row&quot;</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;col-md-6 login-form mx-auto&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>Login to Awesome Chat<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>form className<span class="token operator">=</span><span class="token string">&quot;mt-5&quot;</span> onSubmit<span class="token operator">=</span><span class="token punctuation">{</span>handleSubmit<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;form-group&quot;</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>input
+              type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span>
+              name<span class="token operator">=</span><span class="token string">&quot;username&quot;</span>
+              className<span class="token operator">=</span><span class="token string">&quot;form-control&quot;</span>
+              placeholder<span class="token operator">=</span><span class="token string">&quot;Your Username&quot;</span>
+              value<span class="token operator">=</span><span class="token punctuation">{</span>uidValue<span class="token punctuation">}</span>
+              onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">event</span> <span class="token operator">=&gt;</span> <span class="token function">setUidValue</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span>
+            <span class="token operator">/</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;form-group&quot;</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>input
+              type<span class="token operator">=</span><span class="token string">&quot;submit&quot;</span>
+              className<span class="token operator">=</span><span class="token string">&quot;btn btn-primary btn-block&quot;</span>
+              value<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>isSubmitting <span class="token operator">?</span> <span class="token string">&quot;Loading...&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;Login&quot;</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span>
+              disabled<span class="token operator">=</span><span class="token punctuation">{</span>isSubmitting<span class="token punctuation">}</span>
+            <span class="token operator">/</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Login<span class="token punctuation">;</span>
+</code></pre></div><p>运行<code>npm run start</code>我们看一下效果
+<img src="https://blog-pic.oss-cn-beijing.aliyuncs.com/20191102154328.png" alt="20191102154328.png"><br>
+这个<code>username</code>不是的我们注册用户名，而是菜单&gt;Users 中用户的<code>UID</code></p> <p><img src="https://blog-pic.oss-cn-beijing.aliyuncs.com/20191102154619.png" alt="20191102154619.png"></p> <p>登录成功后我们来看一下返回值：</p> <p><img src="https://blog-pic.oss-cn-beijing.aliyuncs.com/20191102161504.png" alt="20191102161504.png"></p> <h2 id="创建-chat-组件"><a href="#创建-chat-组件" aria-hidden="true" class="header-anchor">#</a> 创建 Chat 组件</h2> <p>在<code>Chat</code>组件中，我们需要的功能：</p> <ul><li>选择朋友聊天</li> <li>查看他们的历史聊天记录</li> <li>发送新消息</li> <li>实时接收响应</li></ul> <p>需要的 state:</p> <ul><li><code>friends</code> 保存可供聊天的用户列表</li> <li><code>selectedFriend</code> 保存当前聊天的用户</li> <li><code>chat</code> 保存朋友之间发送和接收的聊天消息数组</li> <li><code>chatIsLoading</code> 获取聊天数据时显示 loading</li> <li><code>friendIsLoading</code> 获取朋友时显示 loading</li> <li><code>message</code> 提供给消息输入控制组件</li></ul> <p>接下来我们开始编写<code>Chat</code>组件：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> MDSpinner <span class="token keyword">from</span> <span class="token string">&quot;react-md-spinner&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> CometChat <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@cometchat-pro/chat&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">MESSAGE_LISTENER_KEY</span> <span class="token operator">=</span> <span class="token string">&quot;listener-key&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> limit <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">Chat</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> user <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>friends<span class="token punctuation">,</span> setFriends<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>selectedFriend<span class="token punctuation">,</span> setSelectedFriend<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>chat<span class="token punctuation">,</span> setChat<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>chatIsLoading<span class="token punctuation">,</span> setChatIsLoading<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>friendisLoading<span class="token punctuation">,</span> setFriendisLoading<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>message<span class="token punctuation">,</span> setMessage<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// this useEffect will fetch all users available for chat</span>
+    <span class="token comment">// only run on mount</span>
+    <span class="token keyword">let</span> usersRequest <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CometChat<span class="token punctuation">.</span>UsersRequestBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">setLimit</span><span class="token punctuation">(</span>limit<span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    usersRequest<span class="token punctuation">.</span><span class="token function">fetchNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>
+      <span class="token parameter">userList</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;User list received:&quot;</span><span class="token punctuation">,</span> userList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setFriends</span><span class="token punctuation">(</span>userList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setFriendisLoading</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token parameter">error</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;User list fetching failed with error:&quot;</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      CometChat<span class="token punctuation">.</span><span class="token function">removeMessageListener</span><span class="token punctuation">(</span><span class="token constant">MESSAGE_LISTENER_KEY</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      CometChat<span class="token punctuation">.</span><span class="token function">logout</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// will run when selectedFriend variable value is updated</span>
+    <span class="token comment">// fetch previous messages, remove listener if any</span>
+    <span class="token comment">// create new listener for incoming message</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>selectedFriend<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> messagesRequest <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CometChat<span class="token punctuation">.</span>MessagesRequestBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">setUID</span><span class="token punctuation">(</span>selectedFriend<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">setLimit</span><span class="token punctuation">(</span>limit<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      messagesRequest<span class="token punctuation">.</span><span class="token function">fetchPrevious</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>
+        <span class="token parameter">messages</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token function">setChat</span><span class="token punctuation">(</span>messages<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">setChatIsLoading</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">scrollToBottom</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token parameter">error</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Message fetching failed with error:&quot;</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+      CometChat<span class="token punctuation">.</span><span class="token function">removeMessageListener</span><span class="token punctuation">(</span><span class="token constant">MESSAGE_LISTENER_KEY</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      CometChat<span class="token punctuation">.</span><span class="token function">addMessageListener</span><span class="token punctuation">(</span>
+        <span class="token constant">MESSAGE_LISTENER_KEY</span><span class="token punctuation">,</span>
+        <span class="token keyword">new</span> <span class="token class-name">CometChat<span class="token punctuation">.</span>MessageListener</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          <span class="token function-variable function">onTextMessageReceived</span><span class="token punctuation">:</span> <span class="token parameter">message</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Incoming Message Log&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> message <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>selectedFriend <span class="token operator">===</span> message<span class="token punctuation">.</span>sender<span class="token punctuation">.</span>uid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">setChat</span><span class="token punctuation">(</span><span class="token parameter">prevState</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token operator">...</span>prevState<span class="token punctuation">,</span> message<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>selectedFriend<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;container-fluid&quot;</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;row&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;col-md-2&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;col-md-8 h-100pr border rounded&quot;</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;row&quot;</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div
+              className<span class="token operator">=</span><span class="token string">&quot;col-lg-4 col-xs-12 bg-light&quot;</span>
+              style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> height<span class="token punctuation">:</span> <span class="token number">658</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+            <span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;row p-3&quot;</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span>Friend List<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>div
+                className<span class="token operator">=</span><span class="token string">&quot;row ml-0 mr-0 h-75 bg-white border rounded&quot;</span>
+                style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> height<span class="token punctuation">:</span> <span class="token string">&quot;100%&quot;</span><span class="token punctuation">,</span> overflow<span class="token punctuation">:</span> <span class="token string">&quot;auto&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+              <span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>FriendList
+                  friends<span class="token operator">=</span><span class="token punctuation">{</span>friends<span class="token punctuation">}</span>
+                  friendisLoading<span class="token operator">=</span><span class="token punctuation">{</span>friendisLoading<span class="token punctuation">}</span>
+                  selectedFriend<span class="token operator">=</span><span class="token punctuation">{</span>selectedFriend<span class="token punctuation">}</span>
+                  selectFriend<span class="token operator">=</span><span class="token punctuation">{</span>selectFriend<span class="token punctuation">}</span>
+                <span class="token operator">/</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div
+              className<span class="token operator">=</span><span class="token string">&quot;col-lg-8 col-xs-12 bg-light&quot;</span>
+              style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> height<span class="token punctuation">:</span> <span class="token number">658</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+            <span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;row p-3 bg-white&quot;</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span>Who you gonna chat <span class="token keyword">with</span><span class="token operator">?</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>div
+                className<span class="token operator">=</span><span class="token string">&quot;row pt-5 bg-white&quot;</span>
+                style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> height<span class="token punctuation">:</span> <span class="token number">530</span><span class="token punctuation">,</span> overflow<span class="token punctuation">:</span> <span class="token string">&quot;auto&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+              <span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>ChatBox
+                  chat<span class="token operator">=</span><span class="token punctuation">{</span>chat<span class="token punctuation">}</span>
+                  chatIsLoading<span class="token operator">=</span><span class="token punctuation">{</span>chatIsLoading<span class="token punctuation">}</span>
+                  user<span class="token operator">=</span><span class="token punctuation">{</span>user<span class="token punctuation">}</span>
+                <span class="token operator">/</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>div
+                className<span class="token operator">=</span><span class="token string">&quot;row bg-light&quot;</span>
+                style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> bottom<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> width<span class="token punctuation">:</span> <span class="token string">&quot;100%&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+              <span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>form className<span class="token operator">=</span><span class="token string">&quot;row m-0 p-0 w-100&quot;</span> onSubmit<span class="token operator">=</span><span class="token punctuation">{</span>handleSubmit<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+                  <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;col-9 m-0 p-1&quot;</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>input
+                      id<span class="token operator">=</span><span class="token string">&quot;text&quot;</span>
+                      className<span class="token operator">=</span><span class="token string">&quot;mw-100 border rounded form-control&quot;</span>
+                      type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span>
+                      onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">event</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                        <span class="token function">setMessage</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                      <span class="token punctuation">}</span><span class="token punctuation">}</span>
+                      value<span class="token operator">=</span><span class="token punctuation">{</span>message<span class="token punctuation">}</span>
+                      placeholder<span class="token operator">=</span><span class="token string">&quot;Type a message...&quot;</span>
+                    <span class="token operator">/</span><span class="token operator">&gt;</span>
+                  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+                  <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;col-3 m-0 p-1&quot;</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>button
+                      className<span class="token operator">=</span><span class="token string">&quot;btn btn-outline-secondary rounded border w-100&quot;</span>
+                      title<span class="token operator">=</span><span class="token string">&quot;Send&quot;</span>
+                      style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> paddingRight<span class="token punctuation">:</span> <span class="token number">16</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+                    <span class="token operator">&gt;</span>
+                      Send
+                    <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+                  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">ChatBox</span> <span class="token operator">=</span> <span class="token parameter">props</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> chat<span class="token punctuation">,</span> chatIsLoading<span class="token punctuation">,</span> user <span class="token punctuation">}</span> <span class="token operator">=</span> props<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>chatIsLoading<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;col-xl-12 my-auto text-center&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>MDSpinner size<span class="token operator">=</span><span class="token string">&quot;72&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;col-xl-12&quot;</span><span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span>chat<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">chat</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+          <span class="token operator">&lt;</span>div key<span class="token operator">=</span><span class="token punctuation">{</span>chat<span class="token punctuation">.</span>id<span class="token punctuation">}</span> className<span class="token operator">=</span><span class="token string">&quot;message&quot;</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div
+              className<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>
+                chat<span class="token punctuation">.</span>receiver <span class="token operator">!==</span> user<span class="token punctuation">.</span>uid <span class="token operator">?</span> <span class="token string">&quot;balon1&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;balon2&quot;</span>
+              <span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> p-3 m-1</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span>
+            <span class="token operator">&gt;</span>
+              <span class="token punctuation">{</span>chat<span class="token punctuation">.</span>text<span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">&quot;ccChatBoxEnd&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">FriendList</span> <span class="token operator">=</span> <span class="token parameter">props</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> friends<span class="token punctuation">,</span> friendisLoading<span class="token punctuation">,</span> selectedFriend <span class="token punctuation">}</span> <span class="token operator">=</span> props<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>friendisLoading<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;col-xl-12 my-auto text-center&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>MDSpinner size<span class="token operator">=</span><span class="token string">&quot;72&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>ul className<span class="token operator">=</span><span class="token string">&quot;list-group list-group-flush w-100&quot;</span><span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span>friends<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">friend</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+          <span class="token operator">&lt;</span>li
+            key<span class="token operator">=</span><span class="token punctuation">{</span>friend<span class="token punctuation">.</span>uid<span class="token punctuation">}</span>
+            className<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">list-group-item </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>
+              friend<span class="token punctuation">.</span>uid <span class="token operator">===</span> selectedFriend <span class="token operator">?</span> <span class="token string">&quot;active&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span>
+            <span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span>
+            onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> props<span class="token punctuation">.</span><span class="token function">selectFriend</span><span class="token punctuation">(</span>friend<span class="token punctuation">.</span>uid<span class="token punctuation">)</span><span class="token punctuation">}</span>
+          <span class="token operator">&gt;</span>
+            <span class="token punctuation">{</span>friend<span class="token punctuation">.</span>name<span class="token punctuation">}</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+        <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Chat<span class="token punctuation">;</span>
+</code></pre></div><h2 id="handlesubmit函数"><a href="#handlesubmit函数" aria-hidden="true" class="header-anchor">#</a> handleSubmit函数</h2> <p>当要发送新信息时，我们可以调用<code>CometChat.sendMessage</code>方法:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">handleSubmit</span> <span class="token operator">=</span> <span class="token parameter">event</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> textMessage <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CometChat<span class="token punctuation">.</span>TextMessage</span><span class="token punctuation">(</span>
+    selectedFriend<span class="token punctuation">,</span>
+    message<span class="token punctuation">,</span>
+    CometChat<span class="token punctuation">.</span><span class="token constant">MESSAGE_TYPE</span><span class="token punctuation">.</span><span class="token constant">TEXT</span><span class="token punctuation">,</span>
+    CometChat<span class="token punctuation">.</span><span class="token constant">RECEIVER_TYPE</span><span class="token punctuation">.</span><span class="token constant">USER</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  CometChat<span class="token punctuation">.</span><span class="token function">sendMessage</span><span class="token punctuation">(</span>textMessage<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>
+    <span class="token parameter">message</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Message sent successfully:'</span><span class="token punctuation">,</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">setChat</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span>chat<span class="token punctuation">,</span> message<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token parameter">error</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Message sending failed with error:'</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">setMessage</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="scrolltobottom函数"><a href="#scrolltobottom函数" aria-hidden="true" class="header-anchor">#</a> scrollToBottom函数</h2> <p>我们的<code>Chat</code>组件已经很不错了，但是还有一个问题，当获取的消息很多时，用户想看到最新的消息必须要手动滑倒最下面才能看到，这时就需要<code>scrollToBottom</code>函数了</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">scrollToBottom</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> node <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'ccChatBoxEnd'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  node<span class="token punctuation">.</span><span class="token function">scrollIntoView</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>当<code>message state</code>变更时调用这个方法:</p> <div class="language-js extra-class"><pre class="language-js"><code>messagesRequest<span class="token punctuation">.</span><span class="token function">fetchPrevious</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>
+  <span class="token parameter">messages</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">setChat</span><span class="token punctuation">(</span>messages<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">setChatIsLoading</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">scrollToBottom</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token parameter">error</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Message fetching failed with error:'</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div></article> <section class="post-meta main-div" data-v-4e23451f><section class="post-date clearfix" data-v-4e23451f><span class="create-date" data-v-4e23451f>
+      发布时间 : 2019-11-02
+    </span> <span class="update-date" data-v-4e23451f>
+      最后修改 : 2019-11-04
+    </span></section> <section class="post-links" data-v-4e23451f><a href="/posts/2019/10/30/%E7%BB%83%E6%89%8B%E9%A1%B9%E7%9B%AE.html" class="post-link" data-v-4e23451f>
+      上一篇 : 练手项目
+    </a> <a href="/posts/2019/11/05/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html" class="post-link" data-v-4e23451f>
+      下一篇 : 前端工程化
+    </a></section></section> <div id="post-comments" class="main-div"><!----></div></div></main> <aside class="aside" data-v-6e91a59a><div class="info-card main-div" data-v-23d90c50 data-v-6e91a59a><div class="info-card-header" data-v-23d90c50><img src="https://avatars3.githubusercontent.com/u/9149999?s=460&amp;v=4" alt="L.Rain" class="info-avatar" data-v-23d90c50></div> <div class="info-card-body" data-v-23d90c50><section class="info-nickname" data-v-23d90c50>
+      L.Rain
+    </section> <section class="info-desc" data-v-23d90c50>真实、自由、宽容</section> <section class="info-contact" data-v-23d90c50><section data-v-23d90c50><span title="Tianjin City, China" data-v-23d90c50 data-v-23d90c50><svg class="icon" style="font-size:1em;" data-v-23d90c50 data-v-23d90c50><title data-v-23d90c50 data-v-23d90c50>Tianjin City, China</title><use xlink:href="#icon-location" data-v-23d90c50 data-v-23d90c50></use></svg><span class="info-text" data-v-23d90c50 data-v-23d90c50>
+          Tianjin City, China
+        </span></span></section> <section data-v-23d90c50><span title="Tianjin A.Brain Technology" data-v-23d90c50 data-v-23d90c50><svg class="icon" style="font-size:1em;" data-v-23d90c50 data-v-23d90c50><title data-v-23d90c50 data-v-23d90c50>Tianjin A.Brain Technology</title><use xlink:href="#icon-organization" data-v-23d90c50 data-v-23d90c50></use></svg><span class="info-text" data-v-23d90c50 data-v-23d90c50>
+          Tianjin A.Brain Technology
+        </span></span></section> <section data-v-23d90c50><a href="mailto:bxy2997@sina.com" title="bxy2997@sina.com" data-v-23d90c50 data-v-23d90c50><svg class="icon" style="font-size:1em;" data-v-23d90c50 data-v-23d90c50><title data-v-23d90c50 data-v-23d90c50>bxy2997@sina.com</title><use xlink:href="#icon-email" data-v-23d90c50 data-v-23d90c50></use></svg><span class="info-text" data-v-23d90c50 data-v-23d90c50>
+          bxy2997@sina.com
+        </span></a></section></section></div> <div class="info-card-footer" data-v-23d90c50><section class="info-sns clearfix" data-v-23d90c50><a href="https://github.com/baixiaoyu2997" target="_blank" class="sns-link" data-v-23d90c50><span title="GitHub: L.Rain" class="sns-icon" data-v-23d90c50 data-v-23d90c50><svg class="icon" style="font-size:1.5em;" data-v-23d90c50 data-v-23d90c50><title data-v-23d90c50 data-v-23d90c50>GitHub: L.Rain</title><use xlink:href="#icon-github" data-v-23d90c50 data-v-23d90c50></use></svg></span></a><a href="https://weibo.com/1504398495" target="_blank" class="sns-link" data-v-23d90c50><span title="新浪微博: 白晓宇V" class="sns-icon" data-v-23d90c50 data-v-23d90c50><svg class="icon" style="font-size:1.5em;" data-v-23d90c50 data-v-23d90c50><title data-v-23d90c50 data-v-23d90c50>新浪微博: 白晓宇V</title><use xlink:href="#icon-weibo" data-v-23d90c50 data-v-23d90c50></use></svg></span></a></section></div></div> <div class="post-nav-card main-div" style="position:relative;top:0;width:0px;" data-v-6e91a59a><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>文章目录</span> <div class="post-nav-toc"><ul><li><a href="/posts/2019/11/02/%E5%9F%BA%E4%BA%8Ereact%E5%92%8Chooks%E7%9A%84%E8%81%8A%E5%A4%A9demo.html#cometchat-概览">CometChat 概览</a></li><li><a href="/posts/2019/11/02/%E5%9F%BA%E4%BA%8Ereact%E5%92%8Chooks%E7%9A%84%E8%81%8A%E5%A4%A9demo.html#创建-react-项目">创建 React 项目</a></li><li><a href="/posts/2019/11/02/%E5%9F%BA%E4%BA%8Ereact%E5%92%8Chooks%E7%9A%84%E8%81%8A%E5%A4%A9demo.html#编写组件">编写组件</a></li><li><a href="/posts/2019/11/02/%E5%9F%BA%E4%BA%8Ereact%E5%92%8Chooks%E7%9A%84%E8%81%8A%E5%A4%A9demo.html#创建-app-组件">创建 App 组件</a></li><li><a href="/posts/2019/11/02/%E5%9F%BA%E4%BA%8Ereact%E5%92%8Chooks%E7%9A%84%E8%81%8A%E5%A4%A9demo.html#创建-login-组件">创建 Login 组件</a></li><li><a href="/posts/2019/11/02/%E5%9F%BA%E4%BA%8Ereact%E5%92%8Chooks%E7%9A%84%E8%81%8A%E5%A4%A9demo.html#创建-chat-组件">创建 Chat 组件</a></li><li><a href="/posts/2019/11/02/%E5%9F%BA%E4%BA%8Ereact%E5%92%8Chooks%E7%9A%84%E8%81%8A%E5%A4%A9demo.html#handlesubmit函数">handleSubmit函数</a></li><li><a href="/posts/2019/11/02/%E5%9F%BA%E4%BA%8Ereact%E5%92%8Chooks%E7%9A%84%E8%81%8A%E5%A4%A9demo.html#scrolltobottom函数">scrollToBottom函数</a></li></ul></div></div> <div class="post-nav-comments"><svg class="icon"><title>comment</title><use xlink:href="#icon-comment"></use></svg> <a href="/posts/2019/11/02/%E5%9F%BA%E4%BA%8Ereact%E5%92%8Chooks%E7%9A%84%E8%81%8A%E5%A4%A9demo.html#post-comments">
+      评论
+    </a></div></div></aside></div> <footer class="footer" data-v-f018ab8c><p class="footer-sns-links" data-v-f018ab8c><a href="https://github.com/baixiaoyu2997" target="_blank" class="sns-link" data-v-f018ab8c><span title="GitHub: L.Rain" class="sns-icon" data-v-f018ab8c data-v-f018ab8c><svg class="icon" style="font-size:25px;" data-v-f018ab8c data-v-f018ab8c><title data-v-f018ab8c data-v-f018ab8c>GitHub: L.Rain</title><use xlink:href="#icon-github" data-v-f018ab8c data-v-f018ab8c></use></svg></span></a><a href="https://weibo.com/1504398495" target="_blank" class="sns-link" data-v-f018ab8c><span title="新浪微博: 白晓宇V" class="sns-icon" data-v-f018ab8c data-v-f018ab8c><svg class="icon" style="font-size:25px;" data-v-f018ab8c data-v-f018ab8c><title data-v-f018ab8c data-v-f018ab8c>新浪微博: 白晓宇V</title><use xlink:href="#icon-weibo" data-v-f018ab8c data-v-f018ab8c></use></svg></span></a></p> <p class="footer-text" data-v-f018ab8c><span data-v-f018ab8c>Powered by </span> <a href="https://github.com/vuejs/vuepress" target="_blank" data-v-f018ab8c>
+      VuePress
+    </a> <span data-v-f018ab8c> | </span> <a href="https://github.com/meteorlxy/vuepress-theme-meteorlxy" target="_blank" data-v-f018ab8c>
+        meteorlxy
+      </a></p> <!----></footer></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.4bdb41a7.js" defer></script><script src="/assets/js/6.d6b6a6f8.js" defer></script><script src="/assets/js/38.a2af48cb.js" defer></script>
+  </body>
+</html>
