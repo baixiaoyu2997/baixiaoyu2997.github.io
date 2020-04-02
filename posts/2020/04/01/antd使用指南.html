@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>antd使用指南 | L.Rain的博客</title>
+    <meta name="description" content="L.Rain的博客">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="preload" href="/assets/css/0.styles.b6ba0907.css" as="style"><link rel="preload" href="/assets/js/app.29002f70.js" as="script"><link rel="preload" href="/assets/js/7.d728a4a5.js" as="script"><link rel="preload" href="/assets/js/23.34397f72.js" as="script"><link rel="prefetch" href="/assets/js/1.49bfeefe.js"><link rel="prefetch" href="/assets/js/10.1c556fcb.js"><link rel="prefetch" href="/assets/js/11.358b0407.js"><link rel="prefetch" href="/assets/js/12.722ba0de.js"><link rel="prefetch" href="/assets/js/13.8fabeb4f.js"><link rel="prefetch" href="/assets/js/14.23f1002a.js"><link rel="prefetch" href="/assets/js/15.cbbfc821.js"><link rel="prefetch" href="/assets/js/16.5185bb10.js"><link rel="prefetch" href="/assets/js/17.bc43c67e.js"><link rel="prefetch" href="/assets/js/18.2e8be6ad.js"><link rel="prefetch" href="/assets/js/19.fe140d32.js"><link rel="prefetch" href="/assets/js/20.706a971a.js"><link rel="prefetch" href="/assets/js/21.e413cbb0.js"><link rel="prefetch" href="/assets/js/22.abef795d.js"><link rel="prefetch" href="/assets/js/24.7da02604.js"><link rel="prefetch" href="/assets/js/25.6b23b6e6.js"><link rel="prefetch" href="/assets/js/26.2758dd3a.js"><link rel="prefetch" href="/assets/js/27.50fe017c.js"><link rel="prefetch" href="/assets/js/28.c2c5d0f7.js"><link rel="prefetch" href="/assets/js/29.0ce9c976.js"><link rel="prefetch" href="/assets/js/3.a1a345b0.js"><link rel="prefetch" href="/assets/js/30.2676cf4a.js"><link rel="prefetch" href="/assets/js/31.01ed8263.js"><link rel="prefetch" href="/assets/js/32.88447799.js"><link rel="prefetch" href="/assets/js/33.522b9a07.js"><link rel="prefetch" href="/assets/js/34.8683f2b1.js"><link rel="prefetch" href="/assets/js/35.6bbde82f.js"><link rel="prefetch" href="/assets/js/36.f1acdce5.js"><link rel="prefetch" href="/assets/js/37.0b7c5c83.js"><link rel="prefetch" href="/assets/js/38.d31873dc.js"><link rel="prefetch" href="/assets/js/39.9bc3448a.js"><link rel="prefetch" href="/assets/js/4.c130a020.js"><link rel="prefetch" href="/assets/js/40.36deb54a.js"><link rel="prefetch" href="/assets/js/41.a55b6567.js"><link rel="prefetch" href="/assets/js/42.880cfc12.js"><link rel="prefetch" href="/assets/js/43.fe50b727.js"><link rel="prefetch" href="/assets/js/44.5f64a013.js"><link rel="prefetch" href="/assets/js/45.82a7f58b.js"><link rel="prefetch" href="/assets/js/46.92c15ee6.js"><link rel="prefetch" href="/assets/js/47.7a630a07.js"><link rel="prefetch" href="/assets/js/48.8f840059.js"><link rel="prefetch" href="/assets/js/49.d73df8e9.js"><link rel="prefetch" href="/assets/js/5.a361dbdc.js"><link rel="prefetch" href="/assets/js/50.dfe36187.js"><link rel="prefetch" href="/assets/js/51.ba939e11.js"><link rel="prefetch" href="/assets/js/52.74541d09.js"><link rel="prefetch" href="/assets/js/6.187fd589.js"><link rel="prefetch" href="/assets/js/8.ab51651d.js"><link rel="prefetch" href="/assets/js/9.8c0f3510.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.b6ba0907.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-meteorlxy"><header class="header" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(https://picsum.photos/1920/250.webp);" data-v-7a046aea><div data-v-e4145d0a data-v-7a046aea><nav class="navbar" data-v-e4145d0a><div class="container" data-v-e4145d0a><a href="/" class="router-link-active" data-v-e4145d0a><span class="navbar-site-name" data-v-e4145d0a>
+          L.Rain的博客
+        </span></a> <div class="navbar-toggler" data-v-e4145d0a><svg class="icon" style="font-size:1.2em;" data-v-e4145d0a data-v-e4145d0a><title data-v-e4145d0a data-v-e4145d0a>menu</title><use xlink:href="#icon-menu" data-v-e4145d0a data-v-e4145d0a></use></svg></div> <div class="navbar-links" data-v-e4145d0a><a href="/" class="navbar-link" data-v-e4145d0a>
+            主页
+          </a><a href="/posts/" class="navbar-link router-link-active" data-v-e4145d0a>
+            分类
+          </a><a href="https://github.com/baixiaoyu2997" target="_blank" rel="noopener noreferrer" class="navbar-link" data-v-e4145d0a><span data-v-e4145d0a>Github</span> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" data-v-e4145d0a data-v-e4145d0a><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-e4145d0a></div></div> <div class="banner" data-v-98d6aa8c data-v-7a046aea data-v-7a046aea><div class="container" data-v-98d6aa8c><div class="center" data-v-98d6aa8c><h1 data-v-98d6aa8c data-v-7a046aea>
+          antd使用指南
+        </h1></div></div></div></header> <div class="container clearfix show-aside" data-v-4dd605a1 data-v-4dd605a1><main class="main" data-v-4dd605a1><div class="post" data-v-4dd605a1 data-v-4dd605a1><section class="post-meta main-div" data-v-4e23451f><section class="post-date clearfix" data-v-4e23451f><span class="create-date" data-v-4e23451f>
+      发布时间 : 2020-04-01
+    </span> <span class="update-date" data-v-4e23451f>
+      最后修改 : 2020-04-02
+    </span></section> <section class="post-links" data-v-4e23451f><a href="/posts/2020/03/15/%E5%89%8D%E7%AB%AF%E6%8A%80%E8%83%BD%E8%B7%AF%E7%BA%BF-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html" class="post-link" data-v-4e23451f>
+      上一篇 : 前端技能路线-性能优化
+    </a> <a href="/posts/2019/03/27/%E7%BD%91%E5%9D%80%E6%94%B6%E8%97%8F.html" class="post-link" data-v-4e23451f>
+      下一篇 : 网址收藏
+    </a></section></section> <article class="main-div"><div class="post-content content content__default"><h2 id="国际化"><a href="#国际化" aria-hidden="true" class="header-anchor">#</a> 国际化</h2> <p>通过在组件外添加<code>ConfigProvider</code>组件，并设置<code>locale={zhCN}</code></p> <div class="language- extra-class"><pre class="language-text"><code>import React from &quot;react&quot;;
+import { render } from &quot;react-dom&quot;;
+import { ConfigProvider } from &quot;antd&quot;;
+import zhCN from 'antd/es/locale/zh_CN';
+import App from &quot;./App&quot;;
+render(
+  &lt;ConfigProvider locale={zhCN}&gt;
+    &lt;App /&gt;
+  &lt;/ConfigProvider&gt;,
+  document.getElementById(&quot;root&quot;)
+);
+</code></pre></div><h2 id="定制主题"><a href="#定制主题" aria-hidden="true" class="header-anchor">#</a> 定制主题</h2> <h3 id="自定义主题颜色"><a href="#自定义主题颜色" aria-hidden="true" class="header-anchor">#</a> 自定义主题颜色</h3> <p>在<code>create-react-app</code>中，要想使用自定义颜色功能需要手动更改配置，首先下载</p> <div class="language- extra-class"><pre class="language-text"><code>yarn add react-app-rewired customize-cra  -D
+</code></pre></div><p>然后新增或者修改<code>config-overrides.js</code>文件</p> <div class="language- extra-class"><pre class="language-text"><code>const { override, fixBabelImports, addLessLoader } = require('customize-cra');
+module.exports = override(
+  fixBabelImports('import', {
+    libraryName: 'antd',
+    libraryDirectory: 'es',
+    style: true,
+  }),
+  addLessLoader({
+    javascriptEnabled: true,
+    modifyVars: { '@primary-color': '#1DA57A' },
+  }),
+);
+</code></pre></div><p>这里利用了 less-loader 的 modifyVars 来进行主题配置，变量和其他配置方式可以参考<a href="https://ant.design/docs/react/customize-theme-cn" target="_blank" rel="noopener noreferrer">定制主题<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 文档。</p> <h3 id="设置统一样式前缀"><a href="#设置统一样式前缀" aria-hidden="true" class="header-anchor">#</a> 设置统一样式前缀</h3> <p>通过在组件外添加<code>ConfigProvider</code>组件，并设置<code>prefixCls</code></p> <div class="language- extra-class"><pre class="language-text"><code>import React from &quot;react&quot;;
+import { render } from &quot;react-dom&quot;;
+import { ConfigProvider } from &quot;antd&quot;;
+import App from &quot;./App&quot;;
+render(
+  &lt;ConfigProvider prefixCls=&quot;fantuan&quot;&gt;
+    &lt;App /&gt;
+  &lt;/ConfigProvider&gt;,
+  document.getElementById(&quot;root&quot;)
+);
+</code></pre></div></div></article> <section class="post-meta main-div" data-v-4e23451f><section class="post-date clearfix" data-v-4e23451f><span class="create-date" data-v-4e23451f>
+      发布时间 : 2020-04-01
+    </span> <span class="update-date" data-v-4e23451f>
+      最后修改 : 2020-04-02
+    </span></section> <section class="post-links" data-v-4e23451f><a href="/posts/2020/03/15/%E5%89%8D%E7%AB%AF%E6%8A%80%E8%83%BD%E8%B7%AF%E7%BA%BF-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html" class="post-link" data-v-4e23451f>
+      上一篇 : 前端技能路线-性能优化
+    </a> <a href="/posts/2019/03/27/%E7%BD%91%E5%9D%80%E6%94%B6%E8%97%8F.html" class="post-link" data-v-4e23451f>
+      下一篇 : 网址收藏
+    </a></section></section> <div id="post-comments" class="main-div"><!----></div></div></main> <aside class="aside" data-v-4dd605a1><div class="info-card main-div" data-v-9d847660 data-v-4dd605a1><div class="info-card-header" data-v-9d847660><img src="https://blog-pic.oss-cn-beijing.aliyuncs.com/avatar.webp" alt="L.Rain" class="info-avatar" data-v-9d847660></div> <div class="info-card-body" data-v-9d847660><section class="info-nickname" data-v-9d847660>
+      L.Rain
+    </section> <section class="info-desc" data-v-9d847660>真实、自由、宽容</section> <section class="info-contact" data-v-9d847660><section data-v-9d847660><span title="Tianjin City, China" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>Tianjin City, China</title><use xlink:href="#icon-location" data-v-9d847660 data-v-9d847660></use></svg><span class="info-text" data-v-9d847660 data-v-9d847660>
+          Tianjin City, China
+        </span></span></section> <section data-v-9d847660><span title="Tianjin A.Brain Technology" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>Tianjin A.Brain Technology</title><use xlink:href="#icon-organization" data-v-9d847660 data-v-9d847660></use></svg><span class="info-text" data-v-9d847660 data-v-9d847660>
+          Tianjin A.Brain Technology
+        </span></span></section> <section data-v-9d847660><a href="mailto:bxy2997@sina.com" title="bxy2997@sina.com" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>bxy2997@sina.com</title><use xlink:href="#icon-email" data-v-9d847660 data-v-9d847660></use></svg><span class="info-text" data-v-9d847660 data-v-9d847660>
+          bxy2997@sina.com
+        </span></a></section></section></div> <div class="info-card-footer" data-v-9d847660><section class="info-sns clearfix" data-v-9d847660><a href="https://github.com/baixiaoyu2997" target="_blank" class="sns-link" data-v-9d847660><span title="GitHub: L.Rain" class="sns-icon" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1.5em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>GitHub: L.Rain</title><use xlink:href="#icon-github" data-v-9d847660 data-v-9d847660></use></svg></span></a><a href="https://weibo.com/1504398495" target="_blank" class="sns-link" data-v-9d847660><span title="新浪微博: 白晓宇V" class="sns-icon" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1.5em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>新浪微博: 白晓宇V</title><use xlink:href="#icon-weibo" data-v-9d847660 data-v-9d847660></use></svg></span></a></section></div></div> <div class="post-nav-card main-div" style="position:relative;top:0;width:0px;" data-v-4dd605a1><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>文章目录</span> <div class="post-nav-toc"><ul><li><a href="/posts/2020/04/01/antd%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#国际化">国际化</a></li><li><a href="/posts/2020/04/01/antd%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#定制主题">定制主题</a><ul><li><a href="/posts/2020/04/01/antd%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#自定义主题颜色">自定义主题颜色</a></li><li><a href="/posts/2020/04/01/antd%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#设置统一样式前缀">设置统一样式前缀</a></li></ul></li></ul></div></div> <div class="post-nav-comments"><svg class="icon"><title>comment</title><use xlink:href="#icon-comment"></use></svg> <a href="/posts/2020/04/01/antd%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#post-comments">
+      评论
+    </a></div></div></aside></div> <footer class="footer" data-v-1375e54c><p class="footer-sns-links" data-v-1375e54c><a href="https://github.com/baixiaoyu2997" target="_blank" class="sns-link" data-v-1375e54c><span title="GitHub: L.Rain" class="sns-icon" data-v-1375e54c data-v-1375e54c><svg class="icon" style="font-size:25px;" data-v-1375e54c data-v-1375e54c><title data-v-1375e54c data-v-1375e54c>GitHub: L.Rain</title><use xlink:href="#icon-github" data-v-1375e54c data-v-1375e54c></use></svg></span></a><a href="https://weibo.com/1504398495" target="_blank" class="sns-link" data-v-1375e54c><span title="新浪微博: 白晓宇V" class="sns-icon" data-v-1375e54c data-v-1375e54c><svg class="icon" style="font-size:25px;" data-v-1375e54c data-v-1375e54c><title data-v-1375e54c data-v-1375e54c>新浪微博: 白晓宇V</title><use xlink:href="#icon-weibo" data-v-1375e54c data-v-1375e54c></use></svg></span></a></p> <p class="footer-text" data-v-1375e54c><span data-v-1375e54c>Powered by </span> <a href="https://github.com/vuejs/vuepress" target="_blank" data-v-1375e54c>
+      VuePress
+    </a> <span data-v-1375e54c> | </span> <a href="https://github.com/meteorlxy/vuepress-theme-meteorlxy" target="_blank" data-v-1375e54c>
+        meteorlxy
+      </a></p> <!----></footer></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.29002f70.js" defer></script><script src="/assets/js/7.d728a4a5.js" defer></script><script src="/assets/js/23.34397f72.js" defer></script>
+  </body>
+</html>
