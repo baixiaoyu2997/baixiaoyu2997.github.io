@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>GraphQL学习随笔 | L.Rain的博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <meta name="description" content="L.Rain的博客">
+    <link rel="preload" href="/assets/css/0.styles.0b94e76f.css" as="style"><link rel="preload" href="/assets/js/app.3293d6a3.js" as="script"><link rel="preload" href="/assets/js/7.8545d9f8.js" as="script"><link rel="preload" href="/assets/js/23.474a8eaf.js" as="script"><link rel="prefetch" href="/assets/js/1.f6e0f07f.js"><link rel="prefetch" href="/assets/js/10.4a6afb4e.js"><link rel="prefetch" href="/assets/js/100.6dc2e7be.js"><link rel="prefetch" href="/assets/js/101.c9894b59.js"><link rel="prefetch" href="/assets/js/102.4a7a6381.js"><link rel="prefetch" href="/assets/js/103.cc700029.js"><link rel="prefetch" href="/assets/js/104.608a3baa.js"><link rel="prefetch" href="/assets/js/105.b3235feb.js"><link rel="prefetch" href="/assets/js/106.b3c7deac.js"><link rel="prefetch" href="/assets/js/107.0d37e25a.js"><link rel="prefetch" href="/assets/js/108.ebc09bfe.js"><link rel="prefetch" href="/assets/js/109.7bb17420.js"><link rel="prefetch" href="/assets/js/11.d13437d4.js"><link rel="prefetch" href="/assets/js/110.6e56c232.js"><link rel="prefetch" href="/assets/js/111.5029fdfa.js"><link rel="prefetch" href="/assets/js/112.a121a408.js"><link rel="prefetch" href="/assets/js/12.7d7635cb.js"><link rel="prefetch" href="/assets/js/13.919964bf.js"><link rel="prefetch" href="/assets/js/14.5ff823ae.js"><link rel="prefetch" href="/assets/js/15.610bd4c1.js"><link rel="prefetch" href="/assets/js/16.1998630e.js"><link rel="prefetch" href="/assets/js/17.87f9b661.js"><link rel="prefetch" href="/assets/js/18.4495f95d.js"><link rel="prefetch" href="/assets/js/19.4720b022.js"><link rel="prefetch" href="/assets/js/20.fb105d14.js"><link rel="prefetch" href="/assets/js/21.d98b63af.js"><link rel="prefetch" href="/assets/js/22.7f14027b.js"><link rel="prefetch" href="/assets/js/24.205d87b5.js"><link rel="prefetch" href="/assets/js/25.77ffe208.js"><link rel="prefetch" href="/assets/js/26.2638de1d.js"><link rel="prefetch" href="/assets/js/27.60b34830.js"><link rel="prefetch" href="/assets/js/28.852739de.js"><link rel="prefetch" href="/assets/js/29.975659ba.js"><link rel="prefetch" href="/assets/js/3.abcd40dc.js"><link rel="prefetch" href="/assets/js/30.1b7c7aad.js"><link rel="prefetch" href="/assets/js/31.103936eb.js"><link rel="prefetch" href="/assets/js/32.57dd0967.js"><link rel="prefetch" href="/assets/js/33.6b35451f.js"><link rel="prefetch" href="/assets/js/34.03ee4798.js"><link rel="prefetch" href="/assets/js/35.7879abb7.js"><link rel="prefetch" href="/assets/js/36.baec0b56.js"><link rel="prefetch" href="/assets/js/37.9b319dbc.js"><link rel="prefetch" href="/assets/js/38.1146f7b4.js"><link rel="prefetch" href="/assets/js/39.645b5ec4.js"><link rel="prefetch" href="/assets/js/4.037891d1.js"><link rel="prefetch" href="/assets/js/40.9910a09e.js"><link rel="prefetch" href="/assets/js/41.df153334.js"><link rel="prefetch" href="/assets/js/42.0f6ede93.js"><link rel="prefetch" href="/assets/js/43.84d59073.js"><link rel="prefetch" href="/assets/js/44.d9154298.js"><link rel="prefetch" href="/assets/js/45.7be1c210.js"><link rel="prefetch" href="/assets/js/46.deae2f11.js"><link rel="prefetch" href="/assets/js/47.1d461042.js"><link rel="prefetch" href="/assets/js/48.45ef58ca.js"><link rel="prefetch" href="/assets/js/49.5e3dd6ad.js"><link rel="prefetch" href="/assets/js/5.023c6154.js"><link rel="prefetch" href="/assets/js/50.be14e6e2.js"><link rel="prefetch" href="/assets/js/51.5806b954.js"><link rel="prefetch" href="/assets/js/52.c9fad9e9.js"><link rel="prefetch" href="/assets/js/53.4fb67185.js"><link rel="prefetch" href="/assets/js/54.6ae88875.js"><link rel="prefetch" href="/assets/js/55.bcf9a9de.js"><link rel="prefetch" href="/assets/js/56.6a0e8925.js"><link rel="prefetch" href="/assets/js/57.55f6f6e3.js"><link rel="prefetch" href="/assets/js/58.2017c23b.js"><link rel="prefetch" href="/assets/js/59.2546d854.js"><link rel="prefetch" href="/assets/js/6.118b5a7a.js"><link rel="prefetch" href="/assets/js/60.4f832105.js"><link rel="prefetch" href="/assets/js/61.673700ec.js"><link rel="prefetch" href="/assets/js/62.0e81b6d6.js"><link rel="prefetch" href="/assets/js/63.fc80034d.js"><link rel="prefetch" href="/assets/js/64.af2504c1.js"><link rel="prefetch" href="/assets/js/65.7ecad3a1.js"><link rel="prefetch" href="/assets/js/66.ad94249f.js"><link rel="prefetch" href="/assets/js/67.3dacb959.js"><link rel="prefetch" href="/assets/js/68.014e1285.js"><link rel="prefetch" href="/assets/js/69.5a5aa88d.js"><link rel="prefetch" href="/assets/js/70.119ddfa1.js"><link rel="prefetch" href="/assets/js/71.52dc3497.js"><link rel="prefetch" href="/assets/js/72.54951779.js"><link rel="prefetch" href="/assets/js/73.59879c47.js"><link rel="prefetch" href="/assets/js/74.0ee38a94.js"><link rel="prefetch" href="/assets/js/75.0964d582.js"><link rel="prefetch" href="/assets/js/76.e7502c9d.js"><link rel="prefetch" href="/assets/js/77.23cd00d1.js"><link rel="prefetch" href="/assets/js/78.1ccdd876.js"><link rel="prefetch" href="/assets/js/79.53001a9c.js"><link rel="prefetch" href="/assets/js/8.51c6e2dd.js"><link rel="prefetch" href="/assets/js/80.2898ef1d.js"><link rel="prefetch" href="/assets/js/81.18f6bc0b.js"><link rel="prefetch" href="/assets/js/82.aedb9d52.js"><link rel="prefetch" href="/assets/js/83.1a97728c.js"><link rel="prefetch" href="/assets/js/84.4ef13224.js"><link rel="prefetch" href="/assets/js/85.989f39ed.js"><link rel="prefetch" href="/assets/js/86.640e860d.js"><link rel="prefetch" href="/assets/js/87.b97dc1c7.js"><link rel="prefetch" href="/assets/js/88.1cb4f397.js"><link rel="prefetch" href="/assets/js/89.204abb28.js"><link rel="prefetch" href="/assets/js/9.50140b23.js"><link rel="prefetch" href="/assets/js/90.403a6158.js"><link rel="prefetch" href="/assets/js/91.e11b3364.js"><link rel="prefetch" href="/assets/js/92.5a3b677b.js"><link rel="prefetch" href="/assets/js/93.724e5a27.js"><link rel="prefetch" href="/assets/js/94.6655c772.js"><link rel="prefetch" href="/assets/js/95.077ebb71.js"><link rel="prefetch" href="/assets/js/96.cbdbc496.js"><link rel="prefetch" href="/assets/js/97.757227ec.js"><link rel="prefetch" href="/assets/js/98.e2bbcbc8.js"><link rel="prefetch" href="/assets/js/99.6414e435.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0b94e76f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-meteorlxy"><header class="header" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(https://picsum.photos/1920/250.webp);" data-v-7a046aea><div data-v-e4145d0a data-v-7a046aea><nav class="navbar" data-v-e4145d0a><div class="container" data-v-e4145d0a><a href="/" class="router-link-active" data-v-e4145d0a><span class="navbar-site-name" data-v-e4145d0a>
+          L.Rain的博客
+        </span></a> <div class="navbar-toggler" data-v-e4145d0a><svg class="icon" style="font-size:1.2em;" data-v-e4145d0a data-v-e4145d0a><title data-v-e4145d0a data-v-e4145d0a>menu</title><use xlink:href="#icon-menu" data-v-e4145d0a data-v-e4145d0a></use></svg></div> <div class="navbar-links" data-v-e4145d0a><a href="/" class="navbar-link" data-v-e4145d0a>
+            主页
+          </a><a href="/posts/" class="navbar-link router-link-active" data-v-e4145d0a>
+            分类
+          </a><a href="https://github.com/baixiaoyu2997" target="_blank" rel="noopener noreferrer" class="navbar-link" data-v-e4145d0a><span data-v-e4145d0a>Github</span> <span data-v-e4145d0a><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-e4145d0a></div></div> <div class="banner" data-v-98d6aa8c data-v-7a046aea data-v-7a046aea><div class="container" data-v-98d6aa8c><div class="center" data-v-98d6aa8c><h1 data-v-98d6aa8c data-v-7a046aea>
+          GraphQL学习随笔
+        </h1></div></div></div></header> <div class="container clearfix show-aside" data-v-4dd605a1 data-v-4dd605a1><main class="main" data-v-4dd605a1><div class="post" data-v-4dd605a1 data-v-4dd605a1><section class="post-meta main-div" data-v-4e23451f><section class="post-date clearfix" data-v-4e23451f><span class="create-date" data-v-4e23451f>
+      发布时间 : 2022-01-13
+    </span> <span class="update-date" data-v-4e23451f>
+      最后修改 : 2022-02-23
+    </span></section> <section class="post-links" data-v-4e23451f><a href="/posts/2021/11/12/%E7%BB%84%E8%A3%85%E7%94%B5%E8%84%91%E6%8C%87%E5%8D%97.html" class="post-link" data-v-4e23451f>
+      上一篇 : 组装电脑指南
+    </a> <a href="/posts/2022/01/14/thegraph%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85.html" class="post-link" data-v-4e23451f>
+      下一篇 : TheGraph学习之旅
+    </a></section></section> <article class="main-div"><div class="post-content content content__default"><h2 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h2> <p>facebook出品</p> <h2 id="语法"><a href="#语法" class="header-anchor">#</a> 语法</h2> <h3 id="schema"><a href="#schema" class="header-anchor">#</a> schema</h3> <p>定义要传给服务的数据结构，如果客户端定义了服务端不存在的属性，则返回<code>null</code>,如果想强制字段类型不能为空，则添加<code>!</code>,例如：<code>foo:string!</code>。当设置<code>!</code>后表示后端返回值也不能为空，如果为空则报错。</p> <p>对于数组，可以在字段定义时在后边加入<code>!</code>表示该数组不能为空:<code>list:[String]!</code></p> <p>如果数组中的元素也不能为空，则<code>list:[String!]!</code>,该表达式的返回值可以为<code>[]</code></p> <p>语句最外层默认执行Query查询：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+	user
+}
+# 与以下相等
+query {
+	user
+}
+</code></pre></div><p>使用其他内置类型时需要指定,例如： <code>mutation createArticle {}</code></p> <h3 id="函数"><a href="#函数" class="header-anchor">#</a> 函数</h3> <p>默认的对象类型都是返回所有值，查找单个数据时，需要配置函数类型：</p> <div class="language- extra-class"><pre class="language-text"><code>type Query{
+	article(id:ID!): Article // 该函数，id必填，Article为返回类型
+}
+</code></pre></div><p>当没有查询到结果时返回<code>null</code></p> <h4 id="参数"><a href="#参数" class="header-anchor">#</a> 参数</h4> <p>函数中使用where来进行条件查询</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  markets(where: {borrowRate: 15}) {
+    id
+    name
+    symbol
+    borrowRate
+    supplyRate
+  }
+}
+</code></pre></div><p>除了where还支持：</p> <div class="language- extra-class"><pre class="language-text"><code>id：指定 id 查询
+orderBy：指定排序的字段
+orderDirection：排序方向，asc | desc
+first：查询条数，比如设为 10，则最多只查出 10 条记录
+skip：跳过不查询的条数
+block：指定区块查询，可以指定区块 number 或 hash
+text：全文检索
+</code></pre></div><h4 id="后缀"><a href="#后缀" class="header-anchor">#</a> 后缀</h4> <p>查询某个值大于特定值,在参数后加上<code>_gt</code></p> <div class="language- extra-class"><pre class="language-text"><code>{
+  markets(where: {borrowRate_gt: 15}) {
+    id
+    name
+    symbol
+    borrowRate
+    supplyRate
+  }
+}
+</code></pre></div><p>GraphQL提供了多个后缀：</p> <div class="language- extra-class"><pre class="language-text"><code>_not
+_gt
+_lt
+_gte
+_lte
+_in
+_not_in
+_contains
+_not_contains
+_starts_with
+_ends_with
+_not_starts_with
+_not_ends_with
+</code></pre></div><h3 id="type"><a href="#type" class="header-anchor">#</a> type</h3> <p>使用<code>type</code>定义类型。</p> <p>gql自带一组默认标量类型：</p> <ol><li><p>Int</p></li> <li><p>Float</p></li> <li><p>String</p></li> <li><p>Boolean</p></li> <li><p>ID，返回字符串</p></li></ol> <p>类型转换，就像js的隐式类型转换，如果可以转换为有效的类型，则可以使用</p> <h4 id="query"><a href="#query" class="header-anchor">#</a> Query</h4> <p>内置对象类型，用来查找其他对象 ，比需要有Query类型，并且只能有一个。</p> <p>写查询的schema时，如果该类型为对象类型，则一定要写其内部的属性。数组和普通类型写法一样，但是如果数组内值类型为对象，那么需要按照对象类型编写</p> <h4 id="mutation"><a href="#mutation" class="header-anchor">#</a> Mutation</h4> <p>内置对象类型，用来修改数据</p> <h3 id="input"><a href="#input" class="header-anchor">#</a> input</h3> <p>输入参数类型。当函数的参数过多时，应该使用input定义的类型去接收参数：</p> <div class="language- extra-class"><pre class="language-text"><code>input CreateArticleInput{
+	title: String!
+	body: String!
+	tagList:[String!]
+} 
+type Mutation {
+	createArticle(article: CreateArticleInput):Article
+}
+</code></pre></div><h3 id="客户端"><a href="#客户端" class="header-anchor">#</a> 客户端</h3> <p>客户端发起请求时，需要拼写大量的字符串，可以通过传入变量简化操作：</p> <div class="language-js extra-class"><pre class="language-js"><code>data<span class="token operator">:</span><span class="token punctuation">{</span>
+	query<span class="token operator">:</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+	query getUser($id: ID!){ // 变量使用</span><span class="token template-punctuation string">`</span></span>$<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">号声明使用
+		user(id:$id)
+	}
+	</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+	variables<span class="token operator">:</span><span class="token punctuation">{</span>
+		id<span class="token operator">:</span><span class="token number">1</span> 
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="vue3"><a href="#vue3" class="header-anchor">#</a> vue3</h2> <p>与vue一起使用时，可以使用<code>@vue/apollo-composable</code>配合<code>graphql-tag</code>快速编写请求</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> useQuery <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@vue/apollo-composable'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> gql <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'graphql-tag'</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span>result <span class="token punctuation">,</span>loading<span class="token punctuation">}</span><span class="token operator">=</span><span class="token function">useQuery</span><span class="token punctuation">(</span>gql<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+	query AllBlogs {
+		blogs {
+			id
+			title
+			content
+		}
+	}
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+</code></pre></div></div></article> <section class="post-meta main-div" data-v-4e23451f><section class="post-date clearfix" data-v-4e23451f><span class="create-date" data-v-4e23451f>
+      发布时间 : 2022-01-13
+    </span> <span class="update-date" data-v-4e23451f>
+      最后修改 : 2022-02-23
+    </span></section> <section class="post-links" data-v-4e23451f><a href="/posts/2021/11/12/%E7%BB%84%E8%A3%85%E7%94%B5%E8%84%91%E6%8C%87%E5%8D%97.html" class="post-link" data-v-4e23451f>
+      上一篇 : 组装电脑指南
+    </a> <a href="/posts/2022/01/14/thegraph%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85.html" class="post-link" data-v-4e23451f>
+      下一篇 : TheGraph学习之旅
+    </a></section></section> <div id="post-comments" class="main-div"><!----></div></div></main> <aside class="aside" data-v-4dd605a1><div class="info-card main-div" data-v-9d847660 data-v-4dd605a1><div class="info-card-header" data-v-9d847660><img src="https://blog-pic.oss-cn-beijing.aliyuncs.com/avatar.webp" alt="L.Rain" class="info-avatar" data-v-9d847660></div> <div class="info-card-body" data-v-9d847660><section class="info-nickname" data-v-9d847660>
+      L.Rain
+    </section> <section class="info-desc" data-v-9d847660>真实、自由、宽容</section> <section class="info-contact" data-v-9d847660><section data-v-9d847660><span title="ChengDu City, China" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>ChengDu City, China</title><use xlink:href="#icon-location" data-v-9d847660 data-v-9d847660></use></svg><span class="info-text" data-v-9d847660 data-v-9d847660>
+          ChengDu City, China
+        </span></span></section> <section data-v-9d847660><span title="ChengDu YeeYun Technology" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>ChengDu YeeYun Technology</title><use xlink:href="#icon-organization" data-v-9d847660 data-v-9d847660></use></svg><span class="info-text" data-v-9d847660 data-v-9d847660>
+          ChengDu YeeYun Technology
+        </span></span></section> <section data-v-9d847660><a href="mailto:bxy2997@sina.com" title="bxy2997@sina.com" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>bxy2997@sina.com</title><use xlink:href="#icon-email" data-v-9d847660 data-v-9d847660></use></svg><span class="info-text" data-v-9d847660 data-v-9d847660>
+          bxy2997@sina.com
+        </span></a></section></section></div> <div class="info-card-footer" data-v-9d847660><section class="info-sns clearfix" data-v-9d847660><a href="https://github.com/baixiaoyu2997" target="_blank" class="sns-link" data-v-9d847660><span title="GitHub: L.Rain" class="sns-icon" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1.5em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>GitHub: L.Rain</title><use xlink:href="#icon-github" data-v-9d847660 data-v-9d847660></use></svg></span></a><a href="https://weibo.com/1504398495" target="_blank" class="sns-link" data-v-9d847660><span title="新浪微博: 白晓宇V" class="sns-icon" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1.5em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>新浪微博: 白晓宇V</title><use xlink:href="#icon-weibo" data-v-9d847660 data-v-9d847660></use></svg></span></a></section></div></div> <div class="post-nav-card main-div" style="position:relative;top:0;width:0px;" data-v-4dd605a1><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>文章目录</span> <div class="post-nav-toc"><ul><li><a href="/posts/2022/01/13/graphql%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94.html#介绍">介绍</a></li><li><a href="/posts/2022/01/13/graphql%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94.html#语法">语法</a><ul><li><a href="/posts/2022/01/13/graphql%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94.html#schema">schema</a></li><li><a href="/posts/2022/01/13/graphql%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94.html#函数">函数</a></li><li><a href="/posts/2022/01/13/graphql%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94.html#type">type</a></li><li><a href="/posts/2022/01/13/graphql%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94.html#input">input</a></li><li><a href="/posts/2022/01/13/graphql%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94.html#客户端">客户端</a></li></ul></li><li><a href="/posts/2022/01/13/graphql%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94.html#vue3">vue3</a></li></ul></div></div> <div class="post-nav-comments"><svg class="icon"><title>comment</title><use xlink:href="#icon-comment"></use></svg> <a href="/posts/2022/01/13/graphql%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94.html#post-comments">
+      评论
+    </a></div></div></aside></div> <footer class="footer" data-v-1375e54c><p class="footer-sns-links" data-v-1375e54c><a href="https://github.com/baixiaoyu2997" target="_blank" class="sns-link" data-v-1375e54c><span title="GitHub: L.Rain" class="sns-icon" data-v-1375e54c data-v-1375e54c><svg class="icon" style="font-size:25px;" data-v-1375e54c data-v-1375e54c><title data-v-1375e54c data-v-1375e54c>GitHub: L.Rain</title><use xlink:href="#icon-github" data-v-1375e54c data-v-1375e54c></use></svg></span></a><a href="https://weibo.com/1504398495" target="_blank" class="sns-link" data-v-1375e54c><span title="新浪微博: 白晓宇V" class="sns-icon" data-v-1375e54c data-v-1375e54c><svg class="icon" style="font-size:25px;" data-v-1375e54c data-v-1375e54c><title data-v-1375e54c data-v-1375e54c>新浪微博: 白晓宇V</title><use xlink:href="#icon-weibo" data-v-1375e54c data-v-1375e54c></use></svg></span></a></p> <p class="footer-text" data-v-1375e54c><span data-v-1375e54c>Powered by </span> <a href="https://github.com/vuejs/vuepress" target="_blank" data-v-1375e54c>
+      VuePress
+    </a> <span data-v-1375e54c> | </span> <a href="https://github.com/meteorlxy/vuepress-theme-meteorlxy" target="_blank" data-v-1375e54c>
+        meteorlxy
+      </a></p> <!----></footer></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.3293d6a3.js" defer></script><script src="/assets/js/7.8545d9f8.js" defer></script><script src="/assets/js/23.474a8eaf.js" defer></script>
+  </body>
+</html>
